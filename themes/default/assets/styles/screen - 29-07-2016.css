@@ -1,0 +1,346 @@
+/*#################### Screen Style ###################### */
+a{text-decoration: none !important;}
+@media screen  and (min-width:320px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:113px;width: 275px;left: -122px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:197px;width: 435px;left: -202px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:57px;width: 155px;left: -62px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 435px; left: 150px; top: 193px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:435px;top:195px;left: 150px;}
+	.name-left{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 48.7px;}
+	.text-style{left: 200px;position: absolute;text-align: center;width: 100px;}
+	.left{left:120px;}
+	.fa-size{font-size:5em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 98px; width: 100px;}
+	.pur-line-down{right: 62px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 152px; width: 125px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:120px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 120px; right: 87px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 225px; width: 255px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 255px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 174px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 93px; right: 85px;}
+	.est-line-top{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 50px; left: 93px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 280px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 170px; left: 130px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 285px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 19px;}
+	.state-line{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 62px; height: 150px; position: absolute; bottom: 102px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 22px; width: 59px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 50px;}
+}
+@media screen  and (min-width:481px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:113px;width: 275px;left: -122px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:197px;width: 435px;left: -202px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:57px;width: 155px;left: -62px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 435px; left: 150px; top: 193px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:435px;top:195px;left: 150px;}
+	.name-left{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 28.8px;}
+	.text-style{left: -12px;position: absolute;text-align: center;width: 100px;}
+	.left{left:120px;}
+	.fa-size{font-size:4em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 98px; width: 100px;}
+	.pur-line-down{right: 62px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 152px; width: 125px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:120px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 120px; right: 87px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 225px; width: 255px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 255px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 174px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 93px; right: 85px;}
+	.est-line-top{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 50px; left: 93px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 280px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 170px; left: 130px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 285px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 19px;}
+	.state-line{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 62px; height: 150px; position: absolute; bottom: 102px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 22px; width: 59px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 50px;}
+}
+@media screen  and (min-width:641px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px 0;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:124px;width: 298px;left: -133px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:215px;width: 470px;left: -219px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:57px;width: 155px;left: -62px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:475px;top:220px;left: -23px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%; transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:475px;top:222px;left: -23px;}
+	.name-left{height: 25px; text-align: center; width: 100%; padding-top: 2px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 28.7px;}
+	.text-style{left: 1px;position: absolute;text-align: center;width: 100px;}
+	.left{left:120px;}
+	.fa-size{font-size:5em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 98px; width: 100px;}
+	.pur-line-down{right: 62px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 152px; width: 125px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:120px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 120px; right: 87px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 225px; width: 255px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 255px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 174px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 93px; right: 85px;}
+	.est-line-top{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 50px; left: 93px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 280px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 170px; left: 130px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 285px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 19px;}
+	.state-line{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 62px; height: 150px; position: absolute; bottom: 102px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 22px; width: 59px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 50px;}
+}
+@media screen  and (min-width:961px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:113px;width: 275px;left: -122px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:197px;width: 435px;left: -202px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:57px;width: 155px;left: -62px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 435px; left: 150px; top: 193px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%; transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:435px;top:195px;left: 150px;}
+	.name-left{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 48.7px;}
+	.text-style{left: 200px;position: absolute;text-align: center;width: 100px;}
+	.left{left:120px;}
+	.fa-size{font-size:5em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 98px; width: 100px;}
+	.pur-line-down{right: 62px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 152px; width: 125px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:120px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 120px; right: 87px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 225px; width: 255px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 255px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 174px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 93px; right: 85px;}
+	.est-line-top{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 50px; left: 93px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 280px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 170px; left: 130px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 285px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 19px;}
+	.state-line{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 62px; height: 150px; position: absolute; bottom: 102px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 22px; width: 59px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 50px;}
+}
+@media screen  and (min-width:1025px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:113px;width: 275px;left: -122px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:197px;width: 435px;left: -202px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:57px;width: 155px;left: -62px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 435px; left: 150px; top: 193px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:435px;top:195px;left: 150px;}
+	.name-left{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 48.7px;}
+	.text-style{left: 200px;position: absolute;text-align: center;width: 100px;}
+	.left{left:120px;}
+	.fa-size{font-size:5em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 98px; width: 100px;}
+	.pur-line-down{right: 62px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 152px; width: 125px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:120px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 120px; right: 87px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 225px; width: 255px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 255px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 174px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 93px; right: 85px;}
+	.est-line-top{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 50px; left: 93px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 280px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 170px; left: 130px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 285px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 19px;}
+	.state-line{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 62px; height: 150px; position: absolute; bottom: 102px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 22px; width: 59px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 50px;}
+}
+@media screen  and (min-width : 1824px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:113px;width: 275px;left: -122px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:197px;width: 435px;left: -202px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:47px;width: 135px;left: -52px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 393px; left: 390px; top: 171px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:383px;top:170px;left: 395px;}
+	.name-left{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 33.7px;}
+	.text-style{left: 370px;position: absolute;text-align: center;width: 125px;}
+	.left{left:120px;}
+	.fa-size{font-size:5em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 98px; width: 100px;}
+	.pur-line-down{right: 62px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 152px; width: 125px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:120px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 120px; right: 87px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 225px; width: 255px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 255px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 174px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 93px; right: 85px;}
+	.est-line-top{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 50px; left: 93px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 280px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 170px; left: 130px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 285px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 19px;}
+	.state-line{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 62px; height: 150px; position: absolute; bottom: 102px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 22px; width: 59px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 50px;}
+}
+@media (max-width: 1025px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:123px;width: 295px;left: -132px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:205px;width: 450px;left: -209px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:57px;width: 155px;left: -62px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 465px; left: 51px; top: 208px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width:443px;top:201px;left: 62px;}
+	.name-left{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 33.7px;}
+	.text-style{left: 130px;position: absolute;text-align: center;width: 100px;}
+	.left{left:120px;}
+	.fa-size{font-size:5em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 78px; width: 70px;}
+	.pur-line-down{right: 50px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 122px; width: 75px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:72px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 140px; right: 70px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 180px; width: 170px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 170px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 135px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 112px; right: 65px;}
+	.est-line-top{right: 50px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 25px; left: 73px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 180px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 130px; left: 105px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 20px; left: 211px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 0; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: -18px;}
+	.state-line{right: 50px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 50px; height: 150px; position: absolute; bottom: 118px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 32px; width: 35px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 30px;}
+}
+@media (min-width: 1824px) {
+	.boxes{border:5px solid #ccc;padding:20px;}
+	.boxes-left{border:5px solid #ccc;padding:20px;}
+	.Vtitle{background:#fabb3d;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:113px;width: 275px;left: -122px;}
+	.Ctitle{background:#428bca;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:197px;width: 435px;left: -202px;}
+	.Etitle{background:#ff5454;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);top:57px;width: 155px;left: -62px;}
+	.name{height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.Ctitle-left{background:#78cd51;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 432px; left: 156px; top: 191px;}
+	.Btitle-left{background: rgb(153, 153, 153) none repeat scroll 0% 0%;transform-origin: 50% 50% 0px; position: absolute; transform: rotate(-270deg);width: 432px; left: 156px; top: 196px;}
+	.name-left{ height: 40px; text-align: center; width: 100%; padding-top: 8px;}
+	.box-center{text-align:center;}
+	.box-left{text-align:right;}
+	.box-right{text-align:left;}
+	.box-top{padding-top: 30px;}
+	.box-leftTop{padding-top: 48.7px;}
+	.text-style{left: 370px;position: absolute;text-align: center;width: 125px;}
+	.left{left:120px;}
+	.fa-size{font-size:5em;}
+	
+	.pur-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 98px; width: 100px;}
+	.pur-line-down{right: 62px; position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 120px; top: 120px;}
+	.pur-line-down i {position: absolute; color: rgb(204, 204, 204); left: -5px; top: -5px;}
+	.rec-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 152px; width: 125px;}
+	.rec-line-top i{color:#ccc;position:absolute;top:-6px;left:120px;}
+	.ent-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; top: 120px; right: 87px; height: 60px;}
+	.bil-line-top{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; left: 225px; width: 255px;}
+	.bil-line-top i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 255px;}
+	.bil-line-down{height: 150px; position: absolute; border-left: 4px dotted rgb(204, 204, 204); right: 174px; top: 95px;}
+	.bil-line-down i {position:absolute;left:-9px;color:#ccc;top:155px}
+	.cre-line-down{position: absolute; background-color: rgb(204, 204, 204); width: 3px; height: 88px; top: 93px; right: 85px;}
+	.est-line-top{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 143px;}
+	.est-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 50px; left: 93px; top: 39px;}
+	.inv-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; left: 93px; top: 39px; width: 280px;}
+	.pay-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 39px; width: 170px; left: 130px;}
+	.sta-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 285px; top: 39px;}
+	.fin-line-down{background-color: rgb(204, 204, 204); position: absolute; height: 3px; width: 30px; left: 93px; top: 39px;}
+	.fin-line-down i{color: rgb(204, 204, 204); position: absolute; bottom: -5px; left: 19px;}
+	.state-line{right: 62px; position: absolute; bottom: 102px; background-color: rgb(204, 204, 204); width: 3px; height: 88px;}
+	.time-line{right: 62px; height: 150px; position: absolute; bottom: 102px; border-left: 4px dotted rgb(204, 204, 204);}
+	.time-line i{position: absolute; bottom: 145px; color: rgb(204, 204, 204); left: -9px;}
+	.bank-line{background-color: rgb(204, 204, 204); position: absolute; height: 3px; top: 22px; width: 59px; left: -28px;}
+	.bank-line i{position: absolute; color: rgb(204, 204, 204); bottom: -5px; left: 50px;}
+}

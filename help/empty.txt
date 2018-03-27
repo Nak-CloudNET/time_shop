@@ -1,0 +1,135 @@
+TRUNCATE `erp_costing`;
+TRUNCATE `erp_warehouses_products`;
+TRUNCATE `erp_user_logins`;
+TRUNCATE `erp_convert_items`;
+TRUNCATE `erp_loans`;
+TRUNCATE `erp_convert`;
+TRUNCATE `erp_deliveries`;
+TRUNCATE `erp_purchase_items`;
+TRUNCATE `erp_purchase_order_items`;
+TRUNCATE `erp_purchases_order`;
+TRUNCATE `erp_product_photos`;
+TRUNCATE `erp_product_variants`;
+TRUNCATE `erp_purchases`;
+TRUNCATE `erp_payments`;
+TRUNCATE `erp_warehouses_products_variants`;
+TRUNCATE `erp_gl_trans`;
+TRUNCATE `erp_adjustments`;
+TRUNCATE `erp_sale_items`;
+TRUNCATE `erp_transfers`;
+TRUNCATE `erp_bom_items`;
+TRUNCATE `erp_sessions`;
+TRUNCATE `erp_sales`;
+TRUNCATE `erp_return_items`;
+TRUNCATE `erp_expenses`;
+TRUNCATE `erp_return_sales`;
+TRUNCATE `erp_deposits`;
+TRUNCATE `erp_transfer_items`;
+TRUNCATE `erp_bom`;
+TRUNCATE `erp_sale_dev_items`;
+TRUNCATE `erp_pos_register`;
+TRUNCATE `erp_marchine_logs`;
+TRUNCATE `erp_return_purchase_items`;
+TRUNCATE `erp_return_purchases`;
+TRUNCATE `erp_gift_cards`;
+TRUNCATE `erp_sale_tax`;
+TRUNCATE `erp_suspended_items`;
+TRUNCATE `erp_suspended_bills`;
+TRUNCATE `erp_variants`;
+TRUNCATE `erp_suspended`;
+TRUNCATE `erp_marchine`;
+TRUNCATE `erp_quote_items`;
+TRUNCATE `erp_quotes`;
+TRUNCATE `erp_sessions`;
+TRUNCATE `erp_return_withholding_tax_front`;
+TRUNCATE `erp_salary_tax_front`;
+TRUNCATE `erp_product_prices`;
+TRUNCATE `erp_salary_tax_back`;
+TRUNCATE `erp_purchase_tax`;
+TRUNCATE `erp_return_withholding_tax`;
+TRUNCATE `erp_login_attempts`;
+TRUNCATE `erp_return_value_added_tax_back`;
+TRUNCATE `erp_salary_tax`;
+TRUNCATE `erp_return_tax_back`;
+TRUNCATE `erp_return_tax_front`;
+TRUNCATE `erp_return_value_added_tax`;
+TRUNCATE `erp_return_withholding_tax_back`;
+TRUNCATE `erp_serial`;
+TRUNCATE `erp_documents`;
+TRUNCATE `erp_document_photos`;
+TRUNCATE `erp_brands`;
+TRUNCATE `erp_buckle`;
+TRUNCATE `erp_case`;
+TRUNCATE `erp_dials`;
+TRUNCATE `erp_diameter`;
+TRUNCATE `erp_power_reserve`;
+TRUNCATE `erp_strap`;
+TRUNCATE `erp_water_resistance`;
+TRUNCATE `erp_winding`;
+TRUNCATE `erp_products`;
+TRUNCATE `erp_categories`;
+TRUNCATE `erp_subcategories`;
+TRUNCATE `erp_units`;
+TRUNCATE `erp_combo_items`;
+DELETE FROM `erp_companies` WHERE `erp_companies`.`id` > 5;
+DELETE FROM `erp_users` WHERE `erp_users`.`id` > 4;
+DROP TABLE IF EXISTS `erp_order_ref`;
+CREATE TABLE `erp_order_ref` (
+  `ref_id` int(11) NOT NULL AUTO_INCREMENT,
+  `biller_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `so` int(11) NOT NULL DEFAULT '1' COMMENT 'sale order',
+  `qu` int(11) NOT NULL DEFAULT '1' COMMENT 'quote',
+  `po` int(11) NOT NULL DEFAULT '1' COMMENT 'purchase order',
+  `to` int(11) NOT NULL DEFAULT '1' COMMENT 'transfer to',
+  `pos` int(11) NOT NULL DEFAULT '1' COMMENT 'pos',
+  `do` int(11) NOT NULL DEFAULT '1' COMMENT 'delivery order',
+  `pay` int(11) NOT NULL DEFAULT '1' COMMENT 'expense payment',
+  `re` int(11) NOT NULL DEFAULT '1' COMMENT 'sale return',
+  `ex` int(11) NOT NULL DEFAULT '1' COMMENT 'expense',
+  `sp` int(11) NOT NULL DEFAULT '1' COMMENT 'sale payement',
+  `pp` int(11) NOT NULL DEFAULT '1' COMMENT 'purchase payment',
+  `sl` int(11) NOT NULL DEFAULT '1' COMMENT 'sale loan',
+  `tr` int(11) NOT NULL DEFAULT '1' COMMENT 'transfer',
+  `rep` int(11) NOT NULL DEFAULT '1' COMMENT 'purchase return',
+  `con` int(11) NOT NULL DEFAULT '1' COMMENT 'convert product',
+  `pj` int(11) NOT NULL DEFAULT '1' COMMENT 'prouduct job',
+  `pr` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`ref_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of erp_order_ref
+-- ----------------------------
+INSERT INTO `erp_order_ref` VALUES ('1', '1', '2016-02-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('2', '1', '2016-03-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('3', '1', '2016-04-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('4', '1', '2016-05-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('5', '1', '2016-06-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('6', '1', '2016-07-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('7', '1', '2016-08-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('8', '1', '2016-09-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('9', '1', '2016-10-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('10', '1', '2016-11-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('11', '1', '2016-12-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('12', '1', '2017-01-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('13', '1', '2017-02-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('14', '1', '2017-03-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('15', '1', '2017-04-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('16', '1', '2017-05-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('17', '1', '2017-06-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('18', '1', '2017-07-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('19', '1', '2017-08-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('21', '1', '2017-09-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('22', '1', '2017-10-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('23', '1', '2017-11-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('24', '1', '2017-12-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('25', '1', '2018-01-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('26', '1', '2018-02-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('27', '1', '2018-03-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('28', '1', '2018-04-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('29', '1', '2018-05-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('30', '1', '2018-06-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('31', '1', '2018-07-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('32', '1', '2018-08-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `erp_order_ref` VALUES ('33', '1', '2018-09-01', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');

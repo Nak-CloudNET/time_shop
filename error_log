@@ -1,0 +1,122 @@
+[01-Sep-2016 10:53:19 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Settings_model::brandHasProducts() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/System_settings.php on line 4636
+[01-Sep-2016 10:54:01 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Settings_model::brandHasProducts() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/System_settings.php on line 4636
+[01-Sep-2016 10:54:22 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Settings_model::brandHasProducts() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/System_settings.php on line 4636
+[01-Sep-2016 10:55:06 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Settings_model::brandHasProducts() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/System_settings.php on line 4636
+[01-Sep-2016 10:55:10 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Settings_model::brandHasProducts() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/System_settings.php on line 4636
+[01-Sep-2016 12:21:16 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:21:18 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:21:20 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:21:49 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:22:18 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:22:37 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:22:47 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:24:16 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:25:12 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:25:34 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:25:46 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:28:08 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:28:46 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:29:58 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:30:25 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:32:37 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:33:24 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:34:15 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:34:38 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:34:51 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:35:11 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Service_model.php on line 55
+[01-Sep-2016 12:39:18 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Service_model::SerReference() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Services.php on line 72
+[01-Sep-2016 12:44:04 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Products.php on line 2537
+[01-Sep-2016 13:00:42 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Sales.php on line 2578
+[01-Sep-2016 13:55:17 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 103
+[01-Sep-2016 13:55:45 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 13:56:31 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 13:58:33 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 13:59:05 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 13:59:19 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:00:58 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:02:10 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:02:48 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:06:58 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:07:23 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:12:23 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:12:43 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:14:27 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 14:14:30 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/add_service.php on line 96
+[01-Sep-2016 15:09:21 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/modal_view.php on line 130
+[01-Sep-2016 15:09:36 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/modal_view.php on line 130
+[01-Sep-2016 15:10:02 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/modal_view.php on line 130
+[01-Sep-2016 15:11:09 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/modal_view.php on line 130
+[01-Sep-2016 15:12:00 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/modal_view.php on line 130
+[01-Sep-2016 15:13:20 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/services/modal_view.php on line 130
+[01-Sep-2016 15:57:06 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:57:30 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:57:31 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:57:33 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:57:33 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:57:35 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:57:35 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:57:37 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:58:25 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 15:59:13 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:02:50 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:08 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:13 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:17 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:17 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:19 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:19 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:21 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:23 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:26 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:28 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:04:29 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:05:13 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:06:10 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:07:52 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:07:57 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:08:42 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:08:47 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:08:51 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:08:54 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:08:56 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:08:57 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:09:00 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:09:00 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:09:03 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:09:05 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:09:12 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:09:24 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[01-Sep-2016 16:09:27 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '*' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Customers.php on line 103
+[08-Feb-2017 16:15:47 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Quotes.php on line 431
+[08-Feb-2017 16:16:21 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Quotes.php on line 431
+[14-Feb-2017 16:35:46 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/purchases/add.php on line 651
+[16-Feb-2017 16:36:03 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Purchases_model::getProductComboItems() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Purchases.php on line 1435
+[16-Feb-2017 16:36:30 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Purchases_model::getProductComboItems() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Purchases.php on line 1435
+[16-Feb-2017 16:38:25 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined method Purchases_model::getProductComboItems() in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Purchases.php on line 1435
+[23-Feb-2017 16:52:39 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ';' in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Sales_model.php on line 63
+[23-Feb-2017 16:54:05 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ';' in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Sales_model.php on line 63
+[01-Mar-2017 16:09:16 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected end of file in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Reports.php on line 661
+[01-Mar-2017 16:46:05 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ''u' (T_ENCAPSED_AND_WHITESPACE) in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/header.php on line 418
+[07-Mar-2017 16:28:52 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ''recipient'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Notifications.php on line 55
+[07-Mar-2017 16:28:58 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ''recipient'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Notifications.php on line 55
+[07-Mar-2017 16:29:07 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ''recipient'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Notifications.php on line 55
+[07-Mar-2017 16:29:14 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ''recipient'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Notifications.php on line 55
+[07-Mar-2017 16:29:25 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ''recipient'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Notifications.php on line 55
+[07-Mar-2017 16:29:41 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ''recipient'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Notifications.php on line 55
+[09-Mar-2017 15:26:51 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined function row() in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Cmt_model.php on line 62
+[09-Mar-2017 15:28:00 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined function row() in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Cmt_model.php on line 62
+[09-Mar-2017 15:29:48 Asia/Phnom_Penh] PHP Fatal error:  Call to undefined function row() in /home4/iclouder/public_html/CloudNET/timepieces/erp/models/Cmt_model.php on line 62
+[09-Mar-2017 16:32:11 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected '}' in /home4/iclouder/public_html/CloudNET/timepieces/erp/controllers/Notifications.php on line 69
+[26-Apr-2017 17:47:04 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[26-Apr-2017 17:48:14 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[26-Apr-2017 17:49:46 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[01-May-2017 08:51:05 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[05-May-2017 19:53:53 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[05-May-2017 19:54:50 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[06-May-2017 11:45:30 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[06-May-2017 11:46:39 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[06-May-2017 11:47:28 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[06-May-2017 23:15:46 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[06-May-2017 23:16:29 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[07-May-2017 01:45:37 Asia/Phnom_Penh] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/iclouder/public_html/CloudNET/timepieces/themes/default/views/products/edit_product_serial.php on line 25
+[10-May-2017 02:05:34 America/Denver] PHP Warning:  Maximum number of allowable file uploads has been exceeded in Unknown on line 0
