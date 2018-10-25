@@ -6709,9 +6709,10 @@ class Sales extends MY_Controller
         } 
 		else {
 			$this->datatables
-                ->select('sales.id as idd, products.image, sales.date, sales.reference_no, products.code, products.name as pname, categories.name as cname, products.cost, products.price, sale_items.quantity, products.unit, sale_items.serial_no')
+                ->select('sales.id as idd, products.image, sales.date, sales.reference_no, products.code, products.name as pname, categories.name as cname, products.cost, products.price, sale_items.quantity, units.name, sale_items.serial_no')
 				->join('sale_items', 'sales.id = sale_items.sale_id', 'left')
 				->join('products', 'products.id = sale_items.product_id', 'left')
+                ->join('units','products.unit = units.id','left')
 				->join('categories', 'products.category_id = categories.id', 'left')
                 ->from('sales')
 				->where('sale_items.serial_no != "" ');

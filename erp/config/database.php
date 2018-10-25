@@ -62,9 +62,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.1.145',
-	'username' => 'clouderp',
-	'password' => 'Cl0udN3T#1G8',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'iclouderp_timepieces',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'erp_',
