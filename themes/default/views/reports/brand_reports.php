@@ -4,6 +4,35 @@
 	}
 
 </style>
+<script>
+    $(document).ready(function () {
+        function spb(x) {
+            v = x.split('__');
+            return '('+formatQuantity2(v[0])+') <strong>'+formatMoney(v[1])+'</strong>';
+        }
+        var oTable = $('#tbstock').dataTable({
+            "aaSorting": [[2, "desc"]],
+            "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "<?= lang('all') ?>"]],
+            "iDisplayLength": <?= $Settings->rows_per_page ?>,
+            'bProcessing': true, 'bServerSide': true,
+            'sAjaxSource': '<?= site_url('reports/getbrandReport2/?v=1'.$v) ?>',
+            'fnServerData': function (sSource, aoData, fnCallback) {
+                aoData.push({
+                    "name": "<?= $this->security->get_csrf_token_name() ?>",
+                    "value": "<?= $this->security->get_csrf_hash() ?>"
+                });
+                $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
+            },
+            "aoColumns": [{"bSortable": false, "mRender": checkbox}, null, null,null,null],
+            "fnFooterCallback": function (nRow, aaData, iStart, iEnd, aiDisplay) {
+
+            }
+        }).fnSetFilteringDelay().dtFilter([
+            {column_number: 1, filter_default_label: "[<?=lang('product_code');?>]", filter_type: "text", data: []},
+            {column_number: 2, filter_default_label: "[<?=lang('product_name');?>]", filter_type: "text", data: []},
+        ], "footer");
+    });
+</script>
 <?php 
 	if ($Owner) {
 	   echo form_open('reports/warehouse_reports_action' ,'id="action-form"');

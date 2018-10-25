@@ -14262,5 +14262,90 @@ class Reports extends MY_Controller
         $meta = array('page_title' => lang('brand_reports'), 'bc' => $bc);
         $this->page_construct('reports/brand_reports', $meta, $this->data);
 	}
+    function getbrandReport2(){
+
+        $this->erp->checkPermissions('products', TRUE);
+        if ($this->input->get('category')) {
+            $category = $this->input->get('category');
+        } else {
+            $category = NULL;
+        }
+
+        if ($this->input->get('brand')) {
+            $brand = $this->input->get('brand');
+        } else {
+            $brand = NULL;
+        }
+
+        if ($this->input->get('start_date')) {
+            $start_date = $this->input->get('start_date');
+        } else {
+            $start_date = NULL;
+        }
+        if ($this->input->get('end_date')) {
+            $end_date = $this->input->get('end_date');
+        } else {
+            $end_date = NULL;
+        }
+        if ($this->input->get('subcategories')) {
+            $subcategories = $this->input->get('subcategories');
+        } else {
+            $subcategories = NULL;
+        }
+
+        if ($this->input->get('product_id')) {
+            $product_id = $this->input->get('product_id');
+        } else {
+            $product_id = NULL;
+        }
+        if ($start_date) {
+            // $start_date = $this->erp->fld($start_date);
+            //$end_date = $end_date ? $this->erp->fld($end_date) : date('Y-m-d');
+
+            $this->load->library('datatables');
+            $this->datatables
+                ->select("categories.id as id,
+				 brands.name as brand_name,
+				 categories.name as d,
+				 sale_items.quantity,'' as action")
+                ->from('erp_sale_items')
+                ->join('erp_products','erp_sale_items.product_id=erp_products.id','LEFT')
+                ->join('erp_categories','erp_categories.id=erp_products.category_id','LEFT')
+                ->join('erp_subcategories','erp_subcategories.id = erp_products.subcategory_id','LEFT')
+                ->join('erp_brands','erp_brands.id=erp_products.brand_id','LEFT')
+                ->join('erp_serial','erp_serial.id = erp_sale_items.serial_no','LEFT')
+                ->join('erp_sales','erp_sales.id=erp_sale_items.sale_id','LEFT')
+                ->where('date BETWEEN "'. $start_date. '" and "'.$end_date.'"');
+        }else{
+            $this->load->library('datatables');
+            $this->datatables
+                ->select("categories.id as id,
+				  brands.name as brand_name,
+				 categories.name as d,
+				 sale_items.quantity,'' as action")
+                ->from('erp_sale_items')
+                ->join('erp_products','erp_sale_items.product_id=erp_products.id','LEFT')
+                ->join('erp_categories','erp_categories.id=erp_products.category_id','LEFT')
+                ->join('erp_subcategories','erp_subcategories.id = erp_products.subcategory_id','LEFT')
+                ->join('erp_brands','erp_brands.id=erp_products.brand_id','LEFT')
+                ->join('erp_serial','erp_serial.id = erp_sale_items.serial_no','LEFT')
+                ->join('erp_sales','erp_sales.id=erp_sale_items.sale_id','LEFT');
+
+        }
+        if ($category) {
+            $this->db->where($this->db->dbprefix('categories') . ".id", $category);
+        }
+        if ($subcategories) {
+            $this->db->where($this->db->dbprefix('subcategories') . ".id", $subcategories);
+        }
+        if($brand){
+            $this->db->where($this->db->dbprefix('brands') . ".id",$brand);
+        }
+        if($product_id){
+            $this->db->where($this->db->dbprefix('products') . ".id",$product_id);
+
+        }
+        echo $this->datatables->generate();
+    }
 }
     
