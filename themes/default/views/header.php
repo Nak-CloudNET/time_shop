@@ -833,11 +833,11 @@
 													</a>
 												</li>
 												
-												<li id="reports_profit_loss">
-													<a href="<?= site_url('reports/profit_loss') ?>">
-														<i class="fa fa-money"></i><span class="text"> <?= lang('profit_and_loss'); ?></span>
-													</a>
-												</li>
+<!--												<li id="reports_profit_loss">-->
+<!--													<a href="--><?//= site_url('reports/profit_loss') ?><!--">-->
+<!--														<i class="fa fa-money"></i><span class="text"> --><?//= lang('profit_and_loss'); ?><!--</span>-->
+<!--													</a>-->
+<!--												</li>-->
 												 
 											</ul>
 										</li>

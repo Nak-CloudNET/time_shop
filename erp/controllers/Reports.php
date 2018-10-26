@@ -14257,12 +14257,13 @@ class Reports extends MY_Controller
 	
 	function brand_reports()
 	{
+
 		$this->data['vv'] = '';
 		$bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('reports')));
         $meta = array('page_title' => lang('brand_reports'), 'bc' => $bc);
         $this->page_construct('reports/brand_reports', $meta, $this->data);
 	}
-    function getbrandReport2(){
+    function getbrandReport2($warehouse_id = NULL){
 
         $this->erp->checkPermissions('products', TRUE);
         if ($this->input->get('category')) {
@@ -14302,6 +14303,29 @@ class Reports extends MY_Controller
             // $start_date = $this->erp->fld($start_date);
             //$end_date = $end_date ? $this->erp->fld($end_date) : date('Y-m-d');
 
+            $this->erp->checkPermissions('index');
+
+            if ((! $this->Owner || ! $this->Admin) && ! $warehouse_id) {
+                $user = $this->site->getUser();
+                $warehouse_id = $user->warehouse_id;
+            }
+
+            $detail_link = anchor('sales/invoice_landscap_a5/$1', '<i class="fa fa-file-text-o"></i> ' . lang('view_receipt'));
+
+            $delete_link = "<a href='#' class='po' title='<b>" . lang("delete_sale") . "</b>' data-content=\"<p>"
+                . lang('r_u_sure') . "</p><a class='btn btn-danger po-delete' href='" . site_url('sales/delete/$1') . "'>"
+                . lang('i_m_sure') . "</a> <button class='btn po-close'>" . lang('no') . "</button>\"  rel='popover'><i class=\"fa fa-trash-o\"></i> "
+                . lang('delete_sale') . "</a>";
+            $action = '<div class="text-center"><div class="btn-group text-left">'
+                . '<button type="button" class="btn btn-default btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">'. lang('actions') . ' <span class="caret"></span></button> <ul class="dropdown-menu pull-right" role="menu">
+            <li>' . $detail_link . '</li>';
+
+            if($this->Owner || $this->Admin || $this->GP['sales-delete']){
+                $action .= '<li>' . $delete_link . '</li>';
+            }
+            $action .= '</ul></div></div>';
+
+
             $this->load->library('datatables');
             $this->datatables
                 ->select("categories.id as id,
@@ -14322,7 +14346,7 @@ class Reports extends MY_Controller
                 ->select("categories.id as id,
 				  brands.name as brand_name,
 				 categories.name as d,
-				 sale_items.quantity,'' as action")
+				 erp_sale_items.quantity,'' as action")
                 ->from('erp_sale_items')
                 ->join('erp_products','erp_sale_items.product_id=erp_products.id','LEFT')
                 ->join('erp_categories','erp_categories.id=erp_products.category_id','LEFT')
@@ -14345,6 +14369,8 @@ class Reports extends MY_Controller
             $this->db->where($this->db->dbprefix('products') . ".id",$product_id);
 
         }
+
+        $this->datatables->add_column("Actions", $action, "id, psuspend")->unset_column('psuspend');
         echo $this->datatables->generate();
     }
 }

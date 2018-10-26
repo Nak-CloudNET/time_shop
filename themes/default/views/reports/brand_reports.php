@@ -3,6 +3,8 @@
 		background-color: #428BCA;border-color: #357EBD;color:white;text-align:center;
 	}
 
+
+
 </style>
 <script>
     $(document).ready(function () {
@@ -15,7 +17,7 @@
             "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "<?= lang('all') ?>"]],
             "iDisplayLength": <?= $Settings->rows_per_page ?>,
             'bProcessing': true, 'bServerSide': true,
-            'sAjaxSource': '<?= site_url('reports/getbrandReport2/?v=1'.$v) ?>',
+            'sAjaxSource': '<?= site_url('reports/getbrandReport2'.($warehouse_id ? '/'.$warehouse_id : '')) ?>',
             'fnServerData': function (sSource, aoData, fnCallback) {
                 aoData.push({
                     "name": "<?= $this->security->get_csrf_token_name() ?>",

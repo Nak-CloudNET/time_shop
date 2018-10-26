@@ -6665,6 +6665,7 @@ class Sales extends MY_Controller
 		$qty  = $_REQUEST['qty'];
 		$edit = $_REQUEST['edit_id'];
 		$warehouse = $_REQUEST['ware'];
+
 		$this->sales_model->saleEdit($id, $qty, $edit, $warehouse);
 	}
 	
