@@ -74,33 +74,33 @@
                 <div id="form">
 				<?php echo form_open('reports/warehouse_reports', 'id="action-form" method="GET"'); ?>
 					<div class="row">
-                       <div class="col-sm-4">
+                       <!--<div class="col-sm-4">
                             <div class="form-group">
-                                <label class="control-label" for="cat"><?= lang("products"); ?></label>
+                                <label class="control-label" for="cat"><?/*= lang("products"); */?></label>
                                 <?php
-								$cat[""] = "ALL";
+/*								$cat[""] = "ALL";
                                 foreach ($products as $product){
                                     $cat[$product->id] = $product->name;
                                 }
                                 echo form_dropdown('product', $cat, (isset($_GET['product']) ? $_GET['product'] : ''), 'class="form-control" id="product" data-placeholder="' . $this->lang->line("select") . " " . $this->lang->line("producte") . '"');
-                                ?>
+                                */?>
 								
                             </div>
                         </div>
                         
 						<div class="col-sm-4">
                             <div class="form-group">
-                                <?= lang("category", "category") ?>
+                                <?/*= lang("category", "category") */?>
                                 <?php
-                                $cat[''] = "ALL";
+/*                                $cat[''] = "ALL";
                                 foreach ($categories as $category) {
                                     $cat[$category->id] = $category->name;
                                 }
                                 echo form_dropdown('category', $cat, (isset($_GET['category']) ? $_GET['category'] : ''), 'class="form-control select" id="category" placeholder="' . lang("select") . " " . lang("category") . '" style="width:100%"')
-                                ?>
+                                */?>
 
                             </div>
-                        </div>
+                        </div>-->
 						<!-- <div class="col-sm-4">
                             <div class="form-group">
                                 <?= lang("from_date", "from_date"); ?>
@@ -124,42 +124,70 @@
 					
                 </div>
                 <div class="clearfix"></div>
-				
-                <div class="table-responsive" style="width:100%;overflow:auto;">
-                    <table id="tbstock" class="table table-condensed table-bordered table-hover table-striped" >
+
+                <div class="table-responsive">
+                    <table class="table table-bordered table-condensed table-striped">
                         <thead>
-							<tr>
+                            <tr class="info-head">
                                 <th style="min-width:30px; width: 30px; text-align: center;">
-									<input class="checkbox checkth" type="checkbox" name="val" />
-								</th>							
-								<th><?= lang("brand_name") ?></th>
-								<th><?= lang("category") ?></th>
-								<th><?= lang("quantity") ?></th>
-								<th><?= lang("action") ?></th>
-							</tr>
-							
-						</thead>
+                                    <input class="checkbox checkth" type="checkbox" name="val" />
+                                </th>
+                                <th style="min-width:15px; width: 15px; text-align: center;"></th>
+                                <th style="min-width:15px; width: 15px; text-align: center;"></th>
+                                <th class="center"><?= lang("no"); ?></th>
+                                <th><?= lang("image"); ?></th>
+                                <th><?= lang("product referent"); ?></th>
+                                <th><?= lang("product name"); ?></th>
+                                <th><?= lang("serial"); ?></th>
+                                <th><?= lang("quantity"); ?></th>
+                            </tr>
+                        </thead>
                         <tbody>
-							<tr>
-								<td colspan="5" class="dataTables_empty"><?= lang('loading_data_from_server') ?></td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr>
-							    <th></th>							
-								<th></th>
-								<th></th>
-								<th></th>
-								<th></th>
-							</tr>
-                        </tfoot>                       
+                            <?php
+                                foreach ($brands as $brand){
+                            ?>
+                                    <tr>
+                                        <td style="min-width:30px; width: 30px; text-align: center;">
+                                            <input class="checkbox checkth" type="checkbox" name="val" />
+                                        </td>
+                                        <td colspan="8" style="color: blueviolet">Brand Name: <?= $brand->name;?></td>
+                                    </tr>
+                            <?php
+                                    $categories = $this->reports_model->getCategory();
+                                    foreach ($categories as $category) {
+                            ?>
+                                        <tr>
+                                            <td style="min-width:30px; width: 30px; text-align: center;"></td>
+                                            <td></td>
+                                            <td colspan="7">Product Category: Watch</td>
+                                        </tr>
+                            <?php
+                                    }
+                                }
+                            ?>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td colspan="6">Total Product Category: Watch</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td style="min-width:30px; width: 30px; text-align: center;">
+
+                                </td>
+                                <td colspan="8" style="color: blueviolet"> Total Brand Name: Roger Dubuis</td>
+                            </tr>
+                        </tfoot>
+
                     </table>
                 </div>
-				<div class=" text-right">
-					<div class="dataTables_paginate paging_bootstrap">
-						<?= $pagination; ?>
-					</div>
-				</div>
+                <div class=" text-right">
+                    <div class="dataTables_paginate paging_bootstrap">
+                        <?= $pagination; ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

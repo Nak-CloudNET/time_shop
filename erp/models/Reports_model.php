@@ -482,6 +482,17 @@ class Reports_model extends CI_Model
         }
         return FALSE;
 	}
+    function getbrands(){
+        $q = $this->db->get('brands');
+
+        if ($q->num_rows() > 0) {
+            foreach (($q->result()) as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
 	
 	function getDataReportDetail($id)
 	{
@@ -2561,6 +2572,18 @@ ORDER BY
         }
         return false;
 	}
+
+	public function getCategtoryBybrandID($brand_id){
+        $this->db->select("categories.id, categories.name")
+            ->from('erp_categories')
+            ->where('erp_categories.brand_id', $brand_id);
+
+        $q = $this->db->get();
+        if ($q->num_rows() > 0) {
+            return $q->result();
+        }
+        return false;
+    }
 	
 	public function getCategoryByID($id){
 		$pp = "( SELECT pp.category_id as category, pi.product_id, SUM( pi.quantity ) purchasedQty, SUM( pi.net_unit_cost * pi.quantity ) totalPurchase from " . $this->db->dbprefix('products') . " pp
