@@ -144,40 +144,67 @@
                         </thead>
                         <tbody>
                             <?php
-                                foreach ($brands as $brand){
-                            ?>
+                                foreach ($brands as $brand) {
+                                    ?>
                                     <tr>
                                         <td style="min-width:30px; width: 30px; text-align: center;">
-                                            <input class="checkbox checkth" type="checkbox" name="val" />
+                                            <input class="checkbox checkth" type="checkbox" name="val"/>
                                         </td>
-                                        <td colspan="8" style="color: blueviolet">Brand Name: <?= $brand->name;?></td>
+                                        <td colspan="8" style="color: blueviolet">Brand Name: <?= $brand->name; ?></td>
                                     </tr>
-                            <?php
-                                    $categories = $this->reports_model->getCategory();
+
+                                    <?php
+                                    $categories = $this->reports_model->getCategtoryBybrandID($brand->id);
                                     foreach ($categories as $category) {
-                            ?>
+                                        ?>
                                         <tr>
                                             <td style="min-width:30px; width: 30px; text-align: center;"></td>
                                             <td></td>
-                                            <td colspan="7">Product Category: Watch</td>
+                                            <td colspan="7">Product Category:<?= $category->name; ?></td>
+                                        </tr>
+                                        <?php
+                                      $pro = $this->reports_model->getProductBybrandID($brand->id,$category->id);
+                                        $quanlity = 0;
+                                        $total = 0;
+                                        foreach ($pro as $product) {
+                                            $quanlity += $product->quantity;
+                                            $totla =$quanlity + $quanlity;
+
+
+                                            ?>
+                                            <tr>
+                                                <td style="min-width:30px; width: 30px; text-align: center;"></td>
+                                                <td style="min-width:15px; width: 15px; text-align: center;"></td>
+                                                <td style="min-width:15px; width: 15px; text-align: center;"></td>
+                                                <td style="min-width:30px; width: 30px; text-align: left;"><?= $product->id; ?></td>
+                                                <td style="min-width:30px; width: 30px; text-align: left;"><?= $product->image; ?></td>
+                                                <td style="min-width:30px; width: 30px; text-align: left;"><?= $product->code; ?></td>
+                                                <td style="min-width:170px; width: 170px; text-align: left;"><?= $product->name; ?></td>
+                                                <td style="min-width:30px; width: 30px; text-align: left;"></td>
+                                                <td style="min-width:30px; width: 30px; text-align: left;"><?= $product->quantity; ?></td>
+                                            </tr>
+
+
+                                            <?php
+                                        }
+                                        ?>
+                                        <tr>
+                                            <td style="min-width:30px; width: 30px; text-align: center;"></td>
+                                            <td style="min-width:15px; width: 15px; text-align: center;"></td>
+                                            <td colspan="6" style="min-width:30px; width: 30px; text-align:left; color: red">Total Product Category:<?= $category->name; ?></td>
+                                            <td style="min-width:30px; width: 30px; text-align: left;color: red"><?=$quanlity; ?></td>
                                         </tr>
                             <?php
                                     }
                                 }
-                            ?>
+                                ?>
+
                         </tbody>
                         <tfoot>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td colspan="6">Total Product Category: Watch</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td style="min-width:30px; width: 30px; text-align: center;">
 
-                                </td>
-                                <td colspan="8" style="color: blueviolet"> Total Brand Name: Roger Dubuis</td>
+                            <tr>
+                                <td style="min-width:30px; width: 30px; text-align: center;"></td>
+                                <td colspan="8" style="color: blueviolet"> Total Brand Name:<?=$totla; ?></td>
                             </tr>
                         </tfoot>
 

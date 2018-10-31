@@ -14258,6 +14258,7 @@ class Reports extends MY_Controller
 	function brand_reports()
 	{
         $this->data['brands'] = $this->reports_model->getbrands();
+
 		$bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('reports')));
         $meta = array('page_title' => lang('brand_reports'), 'bc' => $bc);
         $this->page_construct('reports/brand_reports', $meta, $this->data);

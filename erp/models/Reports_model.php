@@ -472,8 +472,10 @@ class Reports_model extends CI_Model
         }
         return FALSE;
     }
-	function getCategory(){
+	function getCategory($brand_id){
 		$q = $this->db->get('categories');
+
+		$this->db->where('erp_categories.brand_id',$brand_id);
 		if ($q->num_rows() > 0) {
             foreach (($q->result()) as $row) {
                 $data[] = $row;
@@ -493,13 +495,47 @@ class Reports_model extends CI_Model
         }
         return FALSE;
     }
-	
-	function getDataReportDetail($id)
+    function getProductBrands(){
+        $q = $this->db->get('products');
+
+        if ($q->num_rows() > 0) {
+            foreach (($q->result()) as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+    public function getCategtoryBybrandID($brand_id){
+        $this->db->select("categories.id, categories.name")
+            ->from('erp_categories')
+            ->where('erp_categories.brand_id', $brand_id);
+
+        $q = $this->db->get();
+        if ($q->num_rows() > 0) {
+            return $q->result();
+        }
+        return false;
+    }
+    public function getProductBybrandID($brandID,$category_id){
+        $this->db->select("products.id, products.name, products.code, products.quantity,products.image")
+            ->from('erp_products')
+            ->where('erp_products.category_id', $category_id)
+            ->where('erp_products.brand_id',$brandID);
+
+
+        $q = $this->db->get();
+        if ($q->num_rows() > 0) {
+            return $q->result();
+        }
+        return false;
+    }
+
+
+    function getDataReportDetail($id)
 	{
-	
 		if($id)
 		{
-			
 			$q = $this->db->query("
 								SELECT
 									`erp_sales`.`id`,
@@ -2573,18 +2609,7 @@ ORDER BY
         return false;
 	}
 
-	public function getCategtoryBybrandID($brand_id){
-        $this->db->select("categories.id, categories.name")
-            ->from('erp_categories')
-            ->where('erp_categories.brand_id', $brand_id);
 
-        $q = $this->db->get();
-        if ($q->num_rows() > 0) {
-            return $q->result();
-        }
-        return false;
-    }
-	
 	public function getCategoryByID($id){
 		$pp = "( SELECT pp.category_id as category, pi.product_id, SUM( pi.quantity ) purchasedQty, SUM( pi.net_unit_cost * pi.quantity ) totalPurchase from " . $this->db->dbprefix('products') . " pp
                 left JOIN " . $this->db->dbprefix('purchase_items') . " pi on pp.id = pi.product_id 
