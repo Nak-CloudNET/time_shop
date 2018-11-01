@@ -521,7 +521,8 @@ class Reports_model extends CI_Model
         $this->db->select("products.id, products.name, products.code, products.quantity,products.image")
             ->from('erp_products')
             ->where('erp_products.category_id', $category_id)
-            ->where('erp_products.brand_id',$brandID);
+            ->where('erp_products.brand_id',$brandID)
+            ->where('erp_products.type != "combo"');
 
 
         $q = $this->db->get();

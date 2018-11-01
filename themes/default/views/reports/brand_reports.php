@@ -144,7 +144,10 @@
                         </thead>
                         <tbody>
                             <?php
-                                foreach ($brands as $brand) {
+                            $total = 0;
+
+                            foreach ($brands as $brand) {
+
                                     ?>
                                     <tr>
                                         <td style="min-width:30px; width: 30px; text-align: center;">
@@ -165,10 +168,9 @@
                                         <?php
                                       $pro = $this->reports_model->getProductBybrandID($brand->id,$category->id);
                                         $quanlity = 0;
-                                        $total = 0;
                                         foreach ($pro as $product) {
                                             $quanlity += $product->quantity;
-                                            $totla =$quanlity + $quanlity;
+
 
 
                                             ?>
@@ -177,7 +179,20 @@
                                                 <td style="min-width:15px; width: 15px; text-align: center;"></td>
                                                 <td style="min-width:15px; width: 15px; text-align: center;"></td>
                                                 <td style="min-width:30px; width: 30px; text-align: left;"><?= $product->id; ?></td>
-                                                <td style="min-width:30px; width: 30px; text-align: left;"><?= $product->image; ?></td>
+                                                <td style="min-width:30px; width: 30px; text-align: left;"><ul class="enlarge">
+                                                        <li>
+                                                            <img src="<?= base_url() ?>/assets/uploads/thumbs/<?= $product->image ?>"
+                                                                 class="img-responsive" style="width:50px;"/>
+                                                            <span>
+                                                                      <a href="<?= base_url() ?>/assets/uploads/thumbs/<?= $product->image ?>"
+                                                                         data-toggle="lightbox">
+                                                                        <img src="<?= base_url() ?>/assets/uploads/thumbs/<?= $product->image ?>"
+                                                                             style="width:150px; z-index: 9999999999999;"
+                                                                             class="img-thumbnail"/>
+                                                                      </a>
+                                                                    </span>
+                                                        </li>
+                                                    </ul></td>
                                                 <td style="min-width:30px; width: 30px; text-align: left;"><?= $product->code; ?></td>
                                                 <td style="min-width:170px; width: 170px; text-align: left;"><?= $product->name; ?></td>
                                                 <td style="min-width:30px; width: 30px; text-align: left;"></td>
@@ -187,6 +202,7 @@
 
                                             <?php
                                         }
+                                        $total += $quanlity;
                                         ?>
                                         <tr>
                                             <td style="min-width:30px; width: 30px; text-align: center;"></td>
@@ -204,7 +220,8 @@
 
                             <tr>
                                 <td style="min-width:30px; width: 30px; text-align: center;"></td>
-                                <td colspan="8" style="color: blueviolet"> Total Brand Name:<?=$totla; ?></td>
+                                <td style="min-width:30px; width: 30px; text-align: left; color: red" colspan="7">Total All Brand:</td>
+                                <td  style="color: red"> <?=$total; ?></td>
                             </tr>
                         </tfoot>
 
