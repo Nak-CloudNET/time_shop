@@ -655,10 +655,23 @@ function loadItems() {
             var item_id = site.settings.item_addition == 1 ? item.item_id : item.id;
             quitems[item_id] = item;
 
-            var product_id = item.row.id, item_type = item.row.type, combo_items = item.combo_items,item_price = item.row.price, item_price = item.row.price, item_qty = item.row.qty, item_aqty = item.row.quantity, item_tax_method = item.row.tax_method, item_ds = item.row.discount, item_discount = 0, item_option = item.row.option, item_code = item.row.code, item_serial = item.row.serial, item_name = item.row.name.replace(/"/g, "&#034;").replace(/'/g, "&#039;");
+            var product_id = item.row.id,
+                item_type = item.row.type,
+                combo_items = item.combo_items,
+                item_price = item.row.price,
+                item_price = item.row.price,
+                item_qty = item.row.qty,
+                item_aqty = item.row.quantity,
+                item_tax_method = item.row.tax_method,
+                item_ds = item.row.discount,
+                item_discount = 0,
+                item_option = item.row.option,
+                item_code = item.row.code,
+                item_serial = item.row.serial,
+                item_name = item.row.name.replace(/"/g, "&#034;").replace(/'/g, "&#039;");
             var unit_price = item.row.real_unit_price;
             var ds = item_ds ? item_ds : '0';
-			
+			alert(item_qty);
             if (ds.indexOf("%") !== -1) {
                 var pds = ds.split("%");
                 if (!isNaN(pds[0])) {

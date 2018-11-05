@@ -875,11 +875,11 @@
 													</a>
 												</li>
 												
-												<li id="reports_brand_reports">
-													<a href="<?= site_url('reports/brand_reports') ?>">
-														<i class="fa fa-barcode"></i><span class="text"> <?= lang('brand_reports'); ?></span>
+												<!--<li id="reports_brand_reports">
+													<a href="<?/*= site_url('reports/brand_reports') */?>">
+														<i class="fa fa-barcode"></i><span class="text"> <?/*= lang('brand_reports'); */?></span>
 													</a>
-												</li>
+												</li>-->
 												
 												<li id="reports_product_customers" style="display:none;">
 													<a href="<?= site_url('reports/customer_by_items') ?>">
@@ -1309,11 +1309,11 @@
 															<i class="fa fa-barcode"></i><span class="text"> <?= lang('warehouse_reports'); ?></span>
 														</a>
 													</li>
-													<li id="reports_brand_reports">
-														<a href="<?= site_url('reports/brand_reports') ?>">
-															<i class="fa fa-barcode"></i><span class="text"> <?= lang('brand_reports'); ?></span>
+													<!--<li id="reports_brand_reports">
+														<a href="<?/*= site_url('reports/brand_reports') */?>">
+															<i class="fa fa-barcode"></i><span class="text"> <?/*= lang('brand_reports'); */?></span>
 														</a>
-													</li>
+													</li>-->
 													<li id="reports_product_customers" style="display:none;">
 														<a href="<?= site_url('reports/customer_by_items') ?>">
 															<i class="fa fa-barcode"></i><span class="text"> <?= lang('product_customers'); ?></span>

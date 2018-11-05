@@ -2397,6 +2397,7 @@ class Purchases extends MY_Controller
 					$p_code = $objWorksheet->getCellByColumnAndRow(0,$i)->getValue();
 					if($p_code){
 						$p_reference = $this->site->getReference('po');
+						$reference   = $objWorksheet->getCellByColumnAndRow(6,$i)->getValue();
 						
 						if(!$this->site->getProductByCode($p_code)){
 							$this->session->set_flashdata('error',lang("pr_not_found") . " ( " . $p_code . " ) " . lang('in_inventory') );
@@ -2426,14 +2427,14 @@ class Purchases extends MY_Controller
 						'serial_no'			=> $objWorksheet->getCellByColumnAndRow(3,$i)->getValue(),
 						'warehouse_code'	=> $objWorksheet->getCellByColumnAndRow(4,$i)->getValue(),
 						'supplier_id'		=> $objWorksheet->getCellByColumnAndRow(5,$i)->getValue(),
-						'reference_no'		=> $p_reference, 
-						'date'				=> $objWorksheet->getCellByColumnAndRow(6,$i)->getValue(),
-						'status'			=> $objWorksheet->getCellByColumnAndRow(7,$i)->getValue(),
-						'payment_status'	=> $objWorksheet->getCellByColumnAndRow(8,$i)->getValue(),
-						'discount'			=> $objWorksheet->getCellByColumnAndRow(9,$i)->getValue()
+						'reference_no'		=> $reference?$reference:$p_reference,
+						'date'				=> $objWorksheet->getCellByColumnAndRow(7,$i)->getValue(),
+						'status'			=> $objWorksheet->getCellByColumnAndRow(8,$i)->getValue(),
+						'payment_status'	=> $objWorksheet->getCellByColumnAndRow(9,$i)->getValue(),
+						'discount'			=> $objWorksheet->getCellByColumnAndRow(10,$i)->getValue()
 					);
 				}
-				
+
                 $rw 						= 2;
                 $date 						= '';
                 $reference 					= '';

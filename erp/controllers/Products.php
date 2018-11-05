@@ -2428,8 +2428,7 @@ class Products extends MY_Controller
 				for($i = 2; $i <= $totalrows; $i++)
 				{
 					$p_reference = $objWorksheet->getCellByColumnAndRow(1,$i)->getValue();
-                    echo $p_reference .'<br/>';
-                    /*
+
                     if($p_reference != ""){
     					if (!$this->products_model->getProductByCode(trim($p_reference))) {
     						$this->session->set_flashdata('error', lang("product_code") . " (" . $p_reference . "). " . lang("not_yet_inventory"));
@@ -2465,9 +2464,8 @@ class Products extends MY_Controller
     					}
                         $array[] = trim($p_reference);
                     }
-					*/
+
 				}
-                exit;
 				$count_values = array();
                 foreach ($array as $a) {
 

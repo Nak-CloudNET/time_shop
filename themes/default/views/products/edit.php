@@ -165,16 +165,12 @@
 
                     <div class="form-group standard">
                         <?= lang("product_cost", "cost") ?>
-                        <?= form_input('cost', '', 'class="form-control tip" id="cost" required="required"') ?>
+                        <?= form_input('cost', ($product ? $product->cost : ''), 'class="form-control" id="cost" required="required"') ?>
                     </div>
-					
-					<!--
-					<input type="hidden" name="cost" value="<?=(isset($_POST['cost']) ? $_POST['cost'] : ($product ? $this->erp->formatDecimal($product->cost) : ''))?>">
-					-->
 					
                     <div class="form-group all">
                         <?= lang("product_price", "price") ?>
-                        <?= form_input('price', '', 'class="form-control tip" id="price" required="required"') ?>
+                        <?= form_input('price', ($product ? $product->price : ''), 'class="form-control" id="price" required="required"') ?>
                     </div>
 					
 					<div class="form-group">

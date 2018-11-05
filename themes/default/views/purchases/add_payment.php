@@ -52,7 +52,6 @@
                                         <option value="cash"><?= lang("cash"); ?></option>
                                         <option value="CC"><?= lang("credit_card"); ?></option>
                                         <option value="Cheque"><?= lang("cheque"); ?></option>
-										<!--<option value="deposit"><?= lang("store_credit"); ?></option>-->
                                         <option value="other"><?= lang("other"); ?></option>
                                     </select>
                                 </div>

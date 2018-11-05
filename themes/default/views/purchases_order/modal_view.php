@@ -300,12 +300,12 @@
                                 <span class="hidden-sm hidden-xs"><?= lang('pdf') ?></span>
                             </a>
                         </div>
-                        <div class="btn-group">
-                            <a href="<?= site_url('purchases_order/edit/' . $inv->id) ?>" class="tip btn btn-warning sledit" title="<?= lang('edit') ?>">
+                        <!--<div class="btn-group">
+                            <a href="<?/*= site_url('purchases_order/edit/' . $inv->id) */?>" class="tip btn btn-warning sledit" title="<?/*= lang('edit') */?>">
                                 <i class="fa fa-edit"></i>
-                                <span class="hidden-sm hidden-xs"><?= lang('edit') ?></span>
+                                <span class="hidden-sm hidden-xs"><?/*= lang('edit') */?></span>
                             </a>
-                        </div>
+                        </div>-->
                         <div class="btn-group">
                             <a href="#" class="tip btn btn-danger bpo" title="<b><?= $this->lang->line("delete") ?></b>"
                                 data-content="<div style='width:150px;'><p><?= lang('r_u_sure') ?></p><a class='btn btn-danger' href='<?= site_url('purchases_order/delete/' . $inv->id) ?>'><?= lang('i_m_sure') ?></a> <button class='btn bpo-close'><?= lang('no') ?></button></div>"
