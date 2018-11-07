@@ -3057,10 +3057,10 @@ class Products extends MY_Controller
                             $this->session->set_flashdata('error', lang("product_code").' ('.$p_reference.') '.lang("already_have").' ('.$p_serial.')');
                             redirect("products/update_quantity");
                         }
-						if ($this->products_model->getSerialProducts($p_serial)) {
+						/*if ($this->products_model->getSerialProducts($p_serial)) {
                             $this->session->set_flashdata('error', lang("this_serial").' ('.$p_serial.') '.lang("already_use"));
                             redirect("products/update_quantity");
-                        }
+                        }*/
                     }
 					//======================= End =======================//
 					

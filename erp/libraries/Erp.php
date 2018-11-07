@@ -968,5 +968,14 @@ class Erp
 
         return $names[0];
     }
-	
+
+    public function groupArray($arr, $group) {
+        $temp = array();
+        foreach($arr as $key => $value) {
+            $temp[$value[$group]][$key] = $value;
+        }
+        return $temp;
+    }
+
+
 }

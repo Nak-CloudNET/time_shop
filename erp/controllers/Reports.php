@@ -14258,7 +14258,9 @@ class Reports extends MY_Controller
 	function brand_reports()
 	{
         $this->load->library("pagination");
-        $this->data['brands'] = $this->reports_model->getbrands();
+        //$this->data['brands'] = $this->reports_model->getbrands();
+        $products = $this->reports_model->getProducts();
+        $this->data['brands'] = $this->erp->groupArray($products, 'brand_id');
 
 		$bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('reports')));
         $meta = array('page_title' => lang('brand_reports'), 'bc' => $bc);

@@ -1839,6 +1839,15 @@ ORDER BY
 		}
 		return false;
 	}
+
+    public function getProducts(){
+        $q = $this->db->get_where('products', array('type'=> 'standard'));
+        if($q->num_rows()>0){
+            return $q->result_array();
+        }
+        return false;
+    }
+
 	public function getAllProductsDetailsNUM($pid,$cid){
 		$this->db->select("products.*,units.name as uname");
 		$this->db->join("units","units.id=products.unit","LEFT");
