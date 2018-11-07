@@ -39,6 +39,7 @@
                                     <div class="form-group">
                                         <?= lang("amount", "amount_1"); ?>
                                         <input name="amount-paid" value="<?= $this->erp->formatDecimal($payment->amount); ?>" type="text" amount="<?= (($inv->grand_total - $inv->paid) + $payment->amount + $payment->discount) ?>" id="amount_1" class="pa form-control kb-pad amount"/>
+                                        <input name="amounts" type="hidden" value="<?= $inv->grand_total ?>"/>
                                     </div>
                                 </div>
                             </div>

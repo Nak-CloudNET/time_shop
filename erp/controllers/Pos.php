@@ -1953,30 +1953,39 @@ class Pos extends MY_Controller
         $this->form_validation->set_rules('reference_no', lang("reference_no"), 'required');
         $this->form_validation->set_rules('amount-paid', lang("amount"), 'required');
         $this->form_validation->set_rules('paid_by', lang("paid_by"), 'required');
-        //$this->form_validation->set_rules('note', lang("note"), 'xss_clean');
         $this->form_validation->set_rules('userfile', lang("attachment"), 'xss_clean');
         if ($this->form_validation->run() == true) {
+            $amount  = $this->input->post('amount-paid');
+            $get_amt = $this->input->post('amounts');
+            $inp_amt = $this->input->post('amount-paid');
             if ($this->Owner || $this->Admin) {
                 $date = $this->erp->fld(trim($this->input->post('date')));
             } else {
                 $date = date('Y-m-d H:i:s');
             }
-            $pay 	 = $this->pos_model->getPaymentByID($id);
-			$company = $this->pos_model->getInvoiceByID($pay->sale_id);
-			$payment = array(
-                'date' 			=> $date,
-                'sale_id' 		=> $this->input->post('sale_id'),
-                'reference_no' 	=> $this->input->post('reference_no'),
-                'amount' 		=> $this->input->post('amount-paid'),
-                'paid_by' 		=> $this->input->post('paid_by'),
-                'cheque_no' 	=> $this->input->post('cheque_no'),
-                'cc_no' 		=> $this->input->post('pcc_no'),
-                'cc_holder' 	=> $this->input->post('pcc_holder'),
-                'cc_month' 		=> $this->input->post('pcc_month'),
-                'cc_year' 		=> $this->input->post('pcc_year'),
-                'cc_type' 		=> $this->input->post('pcc_type'),
-                'note' 			=> $this->input->post('note'),
-                'created_by' 	=> $this->session->userdata('user_id')
+            $pay 	  = $this->pos_model->getPaymentByID($id);
+            $company  = $this->pos_model->getInvoiceByID($pay->sale_id);
+            if ($get_amt < $inp_amt) {
+                $amount = $get_amt;
+            }
+            $payment = array(
+                'date' 				=> $date,
+                'sale_id' 			=> $this->input->post('sale_id'),
+                'reference_no' 		=> $this->input->post('reference_no'),
+                'amount' 			=> $amount,
+                'pos_paid'          => $this->input->post('amount-paid'),
+                'paid_by' 			=> $this->input->post('paid_by'),
+                'cheque_no' 		=> $this->input->post('cheque_no'),
+                'bank_transfer_no' 	=> $this->input->post('bank_transfer'),
+                'cc_no' 			=> $this->input->post('paid_by') == 'gift_card' ? $this->input->post('gift_card_no') : $this->input->post('pcc_no'),
+                'cc_holder' 		=> $this->input->post('pcc_holder'),
+                'cc_month' 			=> $this->input->post('pcc_month'),
+                'cc_year' 			=> $this->input->post('pcc_year'),
+                'cc_type' 			=> $this->input->post('pcc_type'),
+                'cc_cvv2' 			=> $this->input->post('pcc_ccv'),
+                'note' 				=> $this->input->post('note'),
+                'created_by' 		=> $this->session->userdata('user_id'),
+                'type' 				=> 'received'
             );
 			
 			$deposit = array(

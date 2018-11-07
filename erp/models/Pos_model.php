@@ -1734,7 +1734,7 @@ class Pos_model extends CI_Model
 	public function updatePayment($id, $payment = array(), $deposit = array())
     {
         if (isset($payment['sale_id']) && isset($payment['paid_by']) && isset($payment['amount'])) {
-            $payment['pos_paid'] 	= $payment['amount'];
+            //$payment['pos_paid'] 	= $payment['amount'];
             $inv 					= $this->getInvoiceByID($payment['sale_id']);
 			
 			$old_pay 	 			= $this->getPaymentByID($id);
@@ -1793,7 +1793,7 @@ class Pos_model extends CI_Model
                     $this->db->update('gift_cards', array('balance' => ($gc->balance - $payment['amount'])), array('card_no' => $payment['cc_no']));
                 }
                 unset($payment['cc_cvv2']);
-                 $this->db->update('payments', $payment, array('id' => $id));
+                $this->db->update('payments', $payment, array('id' => $id));
                 $paid += $payment['amount'];
             }
 			
