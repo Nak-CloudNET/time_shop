@@ -839,6 +839,7 @@ class Purchases_order extends MY_Controller
 					redirect($_SERVER['HTTP_REFERER']);
 				}
 			}
+
 		}
 		
         $this->form_validation->set_message('is_natural_no_zero', $this->lang->line("no_zero_required"));
@@ -915,6 +916,11 @@ class Purchases_order extends MY_Controller
                             $this->session->set_flashdata('error', lang('product_expiry_date_issue') . ' (' . $product_details->name . ')');
                             redirect($_SERVER["HTTP_REFERER"]);
                         }
+                    }
+
+                    if (!$product_details) {
+                        $this->session->set_flashdata('error', lang('product_code') .' '. $item_code.' '. lang('not_in_inventory') );
+                        redirect($_SERVER['HTTP_REFERER']);
                     }
                     
                     $pr_discount = 0;

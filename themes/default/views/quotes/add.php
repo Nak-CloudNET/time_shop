@@ -1505,7 +1505,7 @@ $(document).on('change', '.paid_by_by3', function () {
                         <label for="mquantity" class="col-sm-4 control-label"><?= lang('quantity') ?> *</label>
 
                         <div class="col-sm-8">
-                            <input type="text" readonly value="1" class="form-control" id="mquantity">
+                            <input type="text" readonly value="1" class="form-control"">
                         </div>
                     </div>
                     <?php if ($Settings->product_discount && ($Owner || $Admin || $this->session->userdata('allow_discount'))) { ?>

@@ -489,7 +489,7 @@ $(document).on('click', '.qudel', function () {
         mcode = $('#mcode').val(),
         mname = $('#mname').val(),
         mtax = parseInt($('#mtax').val()),
-        mqty = parseFloat($('#mquantity').val()),
+        mqty = 1,
         mdiscount = $('#mdiscount').val() ? $('#mdiscount').val() : '0',
         unit_price = parseFloat($('#mprice').val()),
         mtax_rate = {};
@@ -671,7 +671,7 @@ function loadItems() {
                 item_name = item.row.name.replace(/"/g, "&#034;").replace(/'/g, "&#039;");
             var unit_price = item.row.real_unit_price;
             var ds = item_ds ? item_ds : '0';
-			alert(item_qty);
+
             if (ds.indexOf("%") !== -1) {
                 var pds = ds.split("%");
                 if (!isNaN(pds[0])) {

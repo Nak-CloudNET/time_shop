@@ -248,10 +248,11 @@ class Suppliers extends MY_Controller
 						$this->session->set_flashdata('error', lang("supplier_name_required"));
 						redirect("suppliers");
 					}
-					
-					if ($this->companies_model->getCompanyByEmail($cs_email)) {
-                        $this->session->set_flashdata('error', lang("check_supplier_email") . " (" . $cs_email . "). " . lang("supplier_already_exist"));
-                        redirect("suppliers");
+					if($cs_email) {
+                        if ($this->companies_model->getCompanyByEmail($cs_email)) {
+                            $this->session->set_flashdata('error', lang("check_supplier_email") . " (" . $cs_email . "). " . lang("supplier_already_exist"));
+                            redirect("suppliers");
+                        }
                     }
 				}
 
