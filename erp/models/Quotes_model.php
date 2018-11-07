@@ -214,9 +214,8 @@ class Quotes_model extends CI_Model
 	
 	public function getPaymentForQuote($quote_id){
 		$this->db->order_by('note', 'ASC');
-		$this->db->limit($limit);
 		$this->db->where('deposit_quote_id', $quote_id);
-		$this->db->where('(note = "Deposit1" OR note = "Deposit2" OR note = "Deposit3")');
+		//$this->db->where('(note = "Deposit1" OR note = "Deposit2" OR note = "Deposit3")');
 		$q = $this->db->get_where('payments');
         if ($q->num_rows() > 0) {
             foreach (($q->result()) as $row) {

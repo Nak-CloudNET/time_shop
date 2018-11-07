@@ -106,7 +106,6 @@
 
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-striped print-table order-table">
-
                     <thead>
 
 						<tr>
@@ -132,7 +131,6 @@
 						</tr>
 
                     </thead>
-
                     <tbody>
 
                     <?php $r = 1;
@@ -223,13 +221,9 @@
                             </td>
 							<td style="text-align:right; padding-right:10px;"><?= $this->erp->formatMoney($inv->total + $inv->product_tax); ?></td>
                             <?php
-							
-                            /*if ($Settings->tax1) {
-                                echo '<td style="text-align:right;">' . $this->erp->formatMoney($inv->product_tax) . '</td>';
-                            }*/
-                            if ($Settings->product_discount && $inv->product_discount != 0) {
-                                echo '<td style="text-align:right;">' . $this->erp->formatMoney($inv->product_discount) . '</td>';
-                            }
+                                if ($Settings->product_discount && $inv->product_discount != 0) {
+                                    echo '<td style="text-align:right;">' . $this->erp->formatMoney($inv->product_discount) . '</td>';
+                                }
                             ?>
                             <td style="text-align:right; padding-right:10px;"><?= $this->erp->formatMoney($inv->final_total); ?></td>
                         </tr>
@@ -247,7 +241,7 @@
                         echo '<tr><td colspan="' . $col . '" style="text-align:right; padding-right:10px;;">' . lang("shipping") . ' (' . $default_currency->code . ')</td><td style="text-align:right; padding-right:10px;">' . $this->erp->formatMoney($inv->shipping) . '</td></tr>';
                     }
                     ?>
-					<?php 
+					<?php
 						$total_deposit = 0;
 						if(isset($deposits)){
 							foreach($deposits as $deposit){
@@ -262,7 +256,8 @@
 						</tr>
 					<?php 
 							}
-						} ?>
+						}
+					?>
                     <tr>
                         <td colspan="<?= $col; ?>"
                             style="text-align:right; font-weight:bold;"><?= lang("total_amount"); ?>
@@ -352,12 +347,6 @@
                                 <span class="hidden-sm hidden-xs"><?= lang('create_purchase') ?></span>
                             </a>
                         </div>
-                        <!--<div class="btn-group">
-                            <a href="<?= site_url('quotes/email/' . $inv->id) ?>" data-toggle="modal" data-target="#myModal2" class="tip btn btn-primary" title="<?= lang('email') ?>">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="hidden-sm hidden-xs"><?= lang('email') ?></span>
-                            </a>
-                        </div>-->
                         <div class="btn-group">
                             <a href="<?= site_url('quotes/pdf/' . $inv->id) ?>" class="tip btn btn-primary" title="<?= lang('download_pdf') ?>">
                                 <i class="fa fa-download"></i>
