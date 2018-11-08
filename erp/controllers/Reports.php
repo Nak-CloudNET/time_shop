@@ -11558,7 +11558,6 @@ class Reports extends MY_Controller
         $this->page_construct('reports/daily_purchases', $meta, $this->data);
     }
 
-
     function monthly_purchases($warehouse_id = NULL, $year = NULL, $pdf = NULL, $user_id = NULL)
     {
         $this->erp->checkPermissions('purchases', true);
@@ -13900,6 +13899,7 @@ class Reports extends MY_Controller
         $meta = array('page_title' => lang('brands_report'), 'bc' => $bc);
         $this->page_construct('reports/brands', $meta, $this->data);
 	}
+
 	function getSalesReportDetail($start_date = NULL, $end_date = NULL, $biller_id = NULL){		
 		
 		$this->load->library("pagination");
@@ -14145,10 +14145,10 @@ class Reports extends MY_Controller
 	{
         $this->data['error'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('error');
 		$this->data['brand'] =$this->reports_model->getbrand();
-		
+        $term = '';
 		if($this->input->post('submit_report')){
 			$warehouse=$this->input->post('warehouses');
-			$item=$this->input->post('item');
+			$item = $this->input->post('item');
 			$this->data['search_term'] =$this->reports_model->search($term,$item);		 
 		}
 		  

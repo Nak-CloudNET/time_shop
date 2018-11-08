@@ -14,6 +14,16 @@
                         <i class="icon fa fa-toggle-down"></i>
                     </a>
                 </li>
+                <li class="dropdown">
+                    <a href="#" id="pdf" data-action="export_pdf" class="tip" title="<?= lang('download_pdf') ?>">
+                        <i class="icon fa fa-file-pdf-o"></i>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="excel" data-action="export_excel" class="tip" title="<?= lang('download_xls') ?>">
+                        <i class="icon fa fa-file-excel-o"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
