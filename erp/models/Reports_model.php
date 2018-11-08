@@ -1840,8 +1840,14 @@ ORDER BY
 		return false;
 	}
 
-    public function getProducts(){
-        $q = $this->db->get_where('products', array('type'=> 'standard'));
+    public function getProducts($brand_id, $category_id, $per_page, $offset){
+        if($brand_id){
+            $this->db->where('brand_id', $brand_id);
+        }
+        if($category_id){
+            $this->db->where('category_id', $category_id);
+        }
+        $q = $this->db->get_where('products', array('type <>'=> 'combo'), $per_page, $offset);
         if($q->num_rows()>0){
             return $q->result_array();
         }

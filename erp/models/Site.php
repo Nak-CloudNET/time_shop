@@ -701,6 +701,14 @@ class Site extends CI_Model
         return FALSE;
     }
 
+    public function getCategories() {
+        $q = $this->db->get('categories');
+        if ($q->num_rows() > 0) {
+            return $q->result();
+        }
+        return FALSE;
+    }
+
     public function getGiftCardByID($id) {
         $q = $this->db->get_where('gift_cards', array('id' => $id), 1);
         if ($q->num_rows() > 0) {

@@ -14258,9 +14258,47 @@ class Reports extends MY_Controller
 	function brand_reports()
 	{
         $this->load->library("pagination");
-        //$this->data['brands'] = $this->reports_model->getbrands();
-        $products = $this->reports_model->getProducts();
+        $brand_id = '';
+        $category_id = '';
+        if ($_GET['brand_id']) {
+            $brand_id = $_GET['brand_id'];
+            $this->db->where('brand_id', $brand_id);
+        }
+        if ($_GET['category_id']) {
+            $category_id = $_GET['category_id'];
+            $this->db->where('category_id', $category_id);
+        }
+        $nums = $this->db->get_where('products', array('type <>'=> 'combo'))->num_rows();
+        $config = array();
+        $config['suffix'] = "?v=1&brand_id=".$brand_id.'&category_id='.$category_id;
+        $config["base_url"] = base_url() . "reports/brand_reports/";
+        $config["total_rows"] = $nums;
+        $config["ob_set"] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $config["per_page"] = 25;
+        $config["uri_segment"] = 3;
+        $config['full_tag_open'] = '<ul class="pagination pagination-sm">';
+        $config['full_tag_close'] = '</ul>';
+        $config['next_tag_open'] = '<li class="next">';
+        $config['next_tag_close'] = '<li>';
+        $config['prev_tag_open'] = '<li class="prev">';
+        $config['prev_tag_close'] = '<li>';
+        $config['cur_tag_open'] = '<li class="active"><a href="#">';
+        $config['cur_tag_close'] = '</a><li>';
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '<li>';
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '<li>';
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+        $config['reuse_query_string'] = true;
+        $this->pagination->initialize($config);
+        $this->data["pagination"] = $this->pagination->create_links();
+
+        $products = $this->reports_model->getProducts($brand_id, $category_id, $config['per_page'], $config['ob_set']);
+
         $this->data['brands'] = $this->erp->groupArray($products, 'brand_id');
+        $this->data['brand_search'] = $this->reports_model->getAllbrand();
+        $this->data['categories_search'] = $this->site->getCategories();
 
 		$bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('reports')));
         $meta = array('page_title' => lang('brand_reports'), 'bc' => $bc);

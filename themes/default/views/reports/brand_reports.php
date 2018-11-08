@@ -23,50 +23,38 @@
 
                 <p class="introtext"><?= lang('list_results'); ?></p>
                 <div id="form">
-				    <?php echo form_open('reports/warehouse_reports', 'id="action-form" method="GET"'); ?>
+				    <?php echo form_open('reports/brand_reports', 'id="action-form" method="GET"'); ?>
                         <div class="row">
-                           <!--<div class="col-sm-4">
+
+                            <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label class="control-label" for="cat"><?/*= lang("products"); */?></label>
+                                    <label class="control-label" for="cat"><?= lang("brands"); ?></label>
                                     <?php
-    /*								$cat[""] = "ALL";
-                                    foreach ($products as $product){
-                                        $cat[$product->id] = $product->name;
-                                    }
-                                    echo form_dropdown('product', $cat, (isset($_GET['product']) ? $_GET['product'] : ''), 'class="form-control" id="product" data-placeholder="' . $this->lang->line("select") . " " . $this->lang->line("producte") . '"');
-                                    */?>
+                                        $bra[""] = "ALL";
+                                        foreach ($brand_search as $brand_){
+                                            $bra[$brand_->id] = $brand_->name;
+                                        }
+                                        echo form_dropdown('brand_id', $bra, $_GET["brand_id"], 'class="form-control" ');
+                                    ?>
 
                                 </div>
                             </div>
 
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <?/*= lang("category", "category") */?>
+                                    <label class="control-label" for="cat"><?= lang("categories"); ?></label>
                                     <?php
-    /*                                $cat[''] = "ALL";
-                                    foreach ($categories as $category) {
-                                        $cat[$category->id] = $category->name;
+                                    $cat[""] = "ALL";
+                                    foreach ($categories_search as $cate_){
+                                        $cat[$cate_->id] = $cate_->name;
                                     }
-                                    echo form_dropdown('category', $cat, (isset($_GET['category']) ? $_GET['category'] : ''), 'class="form-control select" id="category" placeholder="' . lang("select") . " " . lang("category") . '" style="width:100%"')
-                                    */?>
+                                    echo form_dropdown('category_id', $cat, $_GET["category_id"], 'class="form-control" ');
+                                    ?>
 
                                 </div>
-                            </div>-->
-                            <!-- <div class="col-sm-4">
-                                <div class="form-group">
-                                    <?= lang("from_date", "from_date"); ?>
-                                    <?php echo form_input('from_date', (isset($_GET['from_date']) ? $_GET['from_date'] : ''), 'class="form-control date" id="from_date"'); ?>
-                                </div>
                             </div>
-                            <div class="col-sm-4">
-                                <div class="form-group">
-                                    <?= lang("to_date", "to_date"); ?>
-                                    <?php echo form_input('to_date', (isset($_GET['to_date']) ? $_GET['to_date'] : ''), 'class="form-control date" id="to_date"'); ?>
-                                </div>
-                            </div>
-                        -->
 
-                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="controls"> <?php echo form_submit('submit_report', $this->lang->line("submit"), 'class="btn btn-primary sub"'); ?> </div>
                         </div>
@@ -80,7 +68,7 @@
                         <thead>
                             <tr class="info-head">
                                 <th style="min-width:30px; width: 30px; text-align: center;">
-                                    <input class="checkbox checkth" type="checkbox" name="val" />
+                                    <input class="checkbox checkth" type="checkbox" name="check" />
                                 </th>
                                 <th style="min-width:15px; width: 15px; text-align: center;"></th>
                                 <th style="min-width:15px; width: 15px; text-align: center;"></th>
@@ -101,9 +89,9 @@
                             ?>
                                     <tr>
                                         <td style="min-width:30px; width: 30px; text-align: center;">
-                                            <input class="checkbox checkth" type="checkbox" name="val" />
+                                            <input class="checkbox multi-select" value="<?= $brand_id; ?>" type="checkbox" name="val[]" />
                                         </td>
-                                        <td colspan="8" style="color: blueviolet;font-weight: bold">Brand Name: <?= $brand_name; ?></td>
+                                        <td colspan="8" style="color: blueviolet;font-weight: bold">Brand Name: <?= $brand_name?$brand_name:'No Brand'; ?></td>
                                     </tr>
                                     <?php
                                         $ci = 1;
@@ -157,7 +145,7 @@
                                     ?>
                                     <tr style="color: blueviolet;font-weight: bold">
                                         <td></td>
-                                        <td colspan="7">Total Brand: <?=$brand_name ?> </td>
+                                        <td colspan="7">Total Brand: <?= $brand_name?$brand_name:'No Brand'; ?> </td>
                                         <td class="text-center"> <?= $this->erp->formatQuantity($total_brands); ?></td>
                                     </tr>
                             <?php
@@ -170,11 +158,11 @@
 
                     </table>
                 </div>
-                <!--<div class=" text-right">
+                <div class=" text-right">
                     <div class="dataTables_paginate paging_bootstrap">
-                        <?/*= $pagination; */?>
+                        <?= $pagination; ?>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </div>
