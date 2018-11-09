@@ -277,10 +277,9 @@ class Pos extends MY_Controller
                 $real_unit_price 	= $this->erp->formatDecimal($_POST['real_unit_price'][$r]);
                 $unit_price 		= $this->erp->formatDecimal($_POST['unit_price'][$r]);
                 $item_quantity 		= $_POST['quantity'][$r];
-                $item_serial 		= isset($_POST['serial'][$r]) ? $_POST['serial'][$r] : '';
+                $item_serial 		= isset($_POST['serial'][$item_id]) ? $_POST['serial'][$item_id] : '';
                 $item_tax_rate 		= isset($_POST['product_tax'][$r]) ? $_POST['product_tax'][$r] : NULL;
                 $item_discount 		= isset($_POST['product_discount'][$r]) ? $_POST['product_discount'][$r] : NULL;
-                
                 $g_total_txt 		= $_POST['grand_total'][$r];
 				
                 if (isset($item_code) && isset($real_unit_price) && isset($unit_price) && isset($item_quantity)) {
@@ -601,7 +600,7 @@ class Pos extends MY_Controller
 			if (!isset($payment) || empty($payment)) {
                 $payment = array();
             }
-			//$this->erp->print_arrays($data, $payment);
+            //$this->erp->print_arrays($data, $products);
 		}
 
         if ($this->form_validation->run() == true && !empty($products) && !empty($data)){

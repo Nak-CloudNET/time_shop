@@ -67,7 +67,6 @@ class Sales extends MY_Controller
 
             $this->data['warehouse'] = $this->session->userdata('warehouse_id') ? $this->site->getWarehouseByID($this->session->userdata('warehouse_id')) : NULL;
         }
-		
 
         $bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('sales')));
         $meta = array('page_title' => lang('sales'), 'bc' => $bc);
@@ -6720,6 +6719,7 @@ class Sales extends MY_Controller
         }
         echo $this->datatables->generate();
 	}
+
 	function payment_schedule($pdf = NULL, $excel = NULL)
     {
         $this->erp->checkPermissions('Sales');

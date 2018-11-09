@@ -1060,7 +1060,7 @@ function loadItems() {
 				item_discount 	= 0, 
 				item_option 	= item.row.option, 
 				item_code 		= item.row.code, 
-				item_serial 	= item.row.serial, 
+				item_serial 	= item.row.serial,
 				item_details 	= item.row.product_details, 
 				item_note 		= item.row.note, 
 				item_name 		= item.row.name.replace(/"/g, "&#034;").replace(/'/g, "&#039;"), 
@@ -1214,7 +1214,7 @@ function loadItems() {
 			
 			//Serial Number
 			if (site.settings.product_serial == 1) {
-				tr_html += '<td><input class="form-control kb-pad rserial" name="serial[]" '+(is_serial == 1 ? '' : 'disabled')+' type="text" id="serial_' + row_no + '" value="'+item_serial+'"></td>';
+				tr_html += '<td><input class="form-control kb-pad rserial" name="serial['+product_id+']" '+(is_serial == 1 ? '' : 'disabled')+' type="text" id="serial_' + row_no + '" value="'+item_serial+'"></td>';
 			}
 			if (site.settings.product_discount == 1) {
 				tr_html += '<td class="text-right"><input class="form-control kb-pad text-center sdiscount" type="text" value="' + item_ds + '" data-id="' + row_no + '" data-item="' + item_id + '" id="quantity_' + row_no + '" onClick="this.select();"></td>';
