@@ -880,7 +880,11 @@
 														<i class="fa fa-barcode"></i><span class="text"> <?= lang('brand_reports'); ?></span>
 													</a>
 												</li>
-												
+                                                <li id="reports_brand_reports">
+                                                    <a href="<?= site_url('reports/quantity_brand_reports') ?>">
+                                                        <i class="fa fa-barcode"></i><span class="text"> <?= lang('Quantity_by_brand_reports'); ?></span>
+                                                    </a>
+                                                </li>
 												<li id="reports_product_customers" style="display:none;">
 													<a href="<?= site_url('reports/customer_by_items') ?>">
 														<i class="fa fa-barcode"></i><span class="text"> <?= lang('product_customers'); ?></span>
@@ -1314,6 +1318,7 @@
 															<i class="fa fa-barcode"></i><span class="text"> <?= lang('brand_reports'); ?></span>
 														</a>
 													</li>
+
 													<li id="reports_product_customers" style="display:none;">
 														<a href="<?= site_url('reports/customer_by_items') ?>">
 															<i class="fa fa-barcode"></i><span class="text"> <?= lang('product_customers'); ?></span>
