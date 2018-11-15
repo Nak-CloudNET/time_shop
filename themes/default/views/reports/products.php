@@ -42,7 +42,10 @@ if (isset($biller_id)) {
     $(document).ready(function () {
         function spb(x) {
             v = x.split('__');
-            return '('+formatQuantity2(v[0])+') <strong>'+formatMoney(v[1])+'</strong>';
+            return formatQuantity2(v[0]);
+
+
+            //return '('+formatQuantity2(v[0])+') <strong>'+formatMoney(v[1])+'</strong>';
         }
         var oTable = $('#PrRData').dataTable({
             "aaSorting": [[2, "desc"]],

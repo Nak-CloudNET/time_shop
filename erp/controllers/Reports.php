@@ -936,7 +936,7 @@ class Reports extends MY_Controller
                 (COALESCE( PSales.totalSale, 0 ) - COALESCE( PCosts.totalPurchase, 0 )) as Profit", FALSE)
                 ->from('products')
                 ->join($sp, 'products.id = PSales.product_id', 'left')
-                ->join($pp, 'products.id = PCosts.product_id', 'left')				
+                ->join($pp, 'products.id = PCosts.product_id', 'left')
 				->join('warehouses_products wp', 'products.id=wp.product_id', 'left')
 				->join('categories', 'products.category_id=categories.id', 'left')
 				->group_by("products.id");
