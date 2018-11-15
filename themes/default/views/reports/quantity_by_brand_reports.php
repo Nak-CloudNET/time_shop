@@ -74,7 +74,7 @@
                 <div class="clearfix"></div>
 
                 <div class="table-responsive">
-                    <table class="table table-bordered table-condensed table-striped">
+                    <table class="table table-bordered table-condensed table-striped table-hover">
                         <thead>
                             <tr class="info-head">
                                 <th style="min-width:30px; width: 30px; text-align: center;">
@@ -87,7 +87,7 @@
                                 <th><?= lang("quantity"); ?></th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody >
                             <?php
                                 $total_brands = 0;
                                 foreach ($brands as $brand_id => $category) {
@@ -108,7 +108,7 @@
                                     ?>
 
                                             <?php foreach ($products as $product){ ?>
-                                                <tr>
+                                                <tr >
 
                                                    <!-- <td class="text-center">
                                                         <?= $ci; ?>
@@ -132,12 +132,13 @@
                                                 $ci++;
                                             }
                                             ?>
-                                            <tr style="color: #013f50;font-weight: bold;" >
+                                            <tr  style="cursor: pointer" onclick="window.location='products?cate=<?= $category_id; ?>&brand=<?= $brand_id ?>';">
                                                 <td></td>
                                                 <td></td>
 
-                                                <td colspan="1" style="width: 300px">Category: <?= $category_name; ?></td>
-                                                <td class="text-center"><?= $this->erp->formatQuantity($total_categories); ?></td>
+                                                <td colspan="1" style="width: 300px;">Category: <?= $category_name; ?></td>
+                                                <td class="text-center;" title="Click go to detail" style="color: #013f50;font-weight: bold;">
+                                                    <?= $this->erp->formatQuantity($total_categories); ?></td>
                                             </tr>
                                     <?php
                                             $total_brands += $total_categories;

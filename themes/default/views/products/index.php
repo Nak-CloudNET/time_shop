@@ -12,6 +12,12 @@
 	if ($this->input->post('product_type')) {
 		$v .= "&product_type=" . $this->input->post('product_type');
 	}
+    if ($this->input->get('cate')) {
+        $v .= "&cate=" . $this->input->get('cate');
+    }
+    if ($this->input->get('brand')) {
+        $v .= "&brand=" . $this->input->get('brand');
+    }
 ?>
 <style type="text/css" media="screen">
     #PRData td:nth-child(6), #PRData td:nth-child(7) {

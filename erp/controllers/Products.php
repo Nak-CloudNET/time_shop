@@ -35,8 +35,6 @@ class Products extends MY_Controller
     } 
     function index($warehouse_id = NULL)
     {
-        $this->erp->checkPermissions();
-        
         $this->data['error'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('error');
         if ($this->Owner || $this->Admin || !$this->session->userdata('warehouse_id')) {
             $this->data['warehouses'] = $this->site->getAllWarehouses();
@@ -47,6 +45,7 @@ class Products extends MY_Controller
             $this->data['warehouse_id'] = $this->session->userdata('warehouse_id');
             $this->data['warehouse'] = $this->session->userdata('warehouse_id') ? $this->site->getWarehouseByID($this->session->userdata('warehouse_id')) : NULL;
         }
+        
         $this->data['products'] = $this->site->getProducts();
         $this->data['categories'] = $this->site->getAllCategories();
         $bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('products')));
@@ -247,7 +246,7 @@ class Products extends MY_Controller
         }
     }
 
-    function getProducts($warehouse_id = NULL)
+    function getProducts($warehouse_id = NULL,$cate=null,$brand=null)
     {
         $this->erp->checkPermissions('index');
         
@@ -266,10 +265,16 @@ class Products extends MY_Controller
         } else {
             $product_actions = NULL;
         }
-		if ($this->input->get('product_type')) {
-            $product_type = $this->input->get('product_type');
+
+        if ($this->input->get('cate')) {
+            $cate = $this->input->get('cate');
         } else {
-            $product_type = NULL;
+            $cate = NULL;
+        }
+        if ($this->input->get('brand')) {
+            $brand = $this->input->get('brand');
+        } else {
+            $brand = NULL;
         }
 
         if ((! $this->Owner || ! $this->Admin) && ! $warehouse_id) {
@@ -415,6 +420,12 @@ class Products extends MY_Controller
             if (!$this->GP['products-price']) {
                 $this->datatables->unset_column("price");
             }
+        }
+        if($cate){
+            $this->datatables->where($this->db->dbprefix('products') . ".category_id", $cate);
+        }
+        if($brand){
+            $this->datatables->where($this->db->dbprefix('products') . ".brand_id", $brand);
         }
         if ($product) {
             $this->datatables->where($this->db->dbprefix('products') . ".id", $product);
