@@ -76,10 +76,11 @@ if (isset($biller_id)) {
                     pl += parseFloat(aaData[aiDisplay[i]][5]);
                 }
                 var nCells = nRow.getElementsByTagName('th');
-                nCells[3].innerHTML = '<div class="text-right">('+formatQuantity2(pq)+') '+formatMoney(pa)+'</div>';
-                nCells[4].innerHTML = '<div class="text-right">('+formatQuantity2(sq)+') '+formatMoney(sa)+'</div>';
+                nCells[3].innerHTML = '<div class="text-right">'+formatQuantity2(pq)+' '+'</div>';
+                nCells[4].innerHTML = '<div class="text-right">'+formatQuantity2(sq)+' '+'</div>';
                 nCells[5].innerHTML = currencyFormat(parseFloat(pl));
-                nCells[6].innerHTML = '<div class="text-right">('+formatQuantity2(bq)+') '+formatMoney(ba)+'</div>';
+                nCells[6].innerHTML = '<div class="text-right">'+formatQuantity2(bq)+''+'</div>';
+               // nCells[6].innerHTML = '<div class="text-right">('+formatQuantity2(bq)+') '+formatMoney(ba)+'</div>';
             }
         }).fnSetFilteringDelay().dtFilter([
             {column_number: 1, filter_default_label: "[<?=lang('product_code');?>]", filter_type: "text", data: []},
