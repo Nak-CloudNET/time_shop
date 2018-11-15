@@ -45,7 +45,7 @@ if (isset($biller_id)) {
             return formatQuantity2(v[0]);
 
 
-            //return '('+formatQuantity2(v[0])+') <strong>'+formatMoney(v[1])+'</strong>'k;
+            //return '('+formatQuantity2(v[0])+') <strong>'+formatMoney(v[1])+'</strong>'kk;
         }
         var oTable = $('#PrRData').dataTable({
             "aaSorting": [[2, "desc"]],
