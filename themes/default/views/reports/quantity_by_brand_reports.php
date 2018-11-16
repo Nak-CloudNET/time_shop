@@ -60,7 +60,6 @@
                                     }
                                     echo form_dropdown('category_id', $cat, $_GET["category_id"], 'class="form-control" ');
                                     ?>
-
                                 </div>
                             </div>
 
@@ -137,7 +136,7 @@
                                                 <td></td>
 
                                                 <td colspan="1" style="width: 300px;">Category: <?= $category_name; ?></td>
-                                                <td class="text-center;" title="Click go to detail" style="color: #013f50;font-weight: bold;">
+                                                <td class="text-center;" title="Click go to detail" style="color: #013f50;font-weight: bold; text-align: center">
                                                     <?= $this->erp->formatQuantity($total_categories); ?></td>
                                             </tr>
                                     <?php

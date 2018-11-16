@@ -1087,7 +1087,7 @@ class Reports extends MY_Controller
             $this->load->library('datatables');
             $this->db->query('SET SQL_BIG_SELECTS=1');
             $this->datatables
-                ->select($this->db->dbprefix('products') . ".id as idd, " . $this->db->dbprefix('products') . ".code, " . $this->db->dbprefix('products') . ".name,
+                ->select($this->db->dbprefix('products') . ".id as idd, " .$this->db->dbprefix('brands') . ".name as gg, ".$this->db->dbprefix('categories') . ".name as nn, " . $this->db->dbprefix('products') . ".code, " . $this->db->dbprefix('products') . ".name,
 				CONCAT(COALESCE( PCosts.purchasedQty, 0 ), '__', COALESCE( PCosts.totalPurchase, 0 )) as purchased,
 				CONCAT(
                     COALESCE (PSales.soldQty, 0) + COALESCE (
@@ -1112,6 +1112,7 @@ class Reports extends MY_Controller
                 ->join($pp, 'products.id = PCosts.product_id', 'left')				
 				->join('warehouses_products wp', 'products.id=wp.product_id', 'left')
 				->join('categories', 'products.category_id=categories.id', 'left')
+                ->join('brands', 'products.brand_id=brands.id', 'inner')
 				->group_by("products.id")
 				->add_column("Action", '<div class="text-center"><div class="btn-group text-left">'. '<button type="button" class="btn btn-default btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">'. lang('actions') . ' <span class="caret"></span></button><ul class="dropdown-menu pull-right" role="menu"><li>' . $detail_purchase . '</li><li>' . $detail_sale . '</li><ul></div></div>', $this->db->dbprefix('products') . ".code");
 
