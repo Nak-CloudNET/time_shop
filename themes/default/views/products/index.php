@@ -80,16 +80,16 @@
 					<?php }?>
 					{"mRender": formatQuantity}, 
 					{"bVisible": false},
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
-					{"bVisible": false}, 
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
+					{"bVisible": false},
 					{"bSortable": false}
             ]
         }).fnSetFilteringDelay().dtFilter([

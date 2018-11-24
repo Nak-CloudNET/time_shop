@@ -51,7 +51,7 @@
 					<thead>
 						<tr>
 							<th><?= lang("no"); ?></th>
-							<th><?= lang("description"); ?></th>
+							<th><?= lang("Product Name (Product Reference)"); ?></th>
 							<th><?= lang("qty"); ?></th>
 							<th><?= lang("unit"); ?></th>
 							<?php if ($inv->total_discount != 0 || $total_disc != '') {
@@ -65,11 +65,13 @@
 						$no = 1;
 						$m_us = 0;
 						$total_quantity = 0;
+                        $t_discount = 0;
 						foreach($rows as $row){
+
 							$free = lang('free');
-							//$this->erp->print_arrays($row);
-							echo '<tr class="item"><td class="text-left">#' . $no . "</td>";
-							echo '<td class="text-left">' . $row->product_name . ($row->variant ? ' (' . $row->variant . ')' : '') . '</td>';
+                            $t_discount += $row->discount;
+							echo '<tr ><td class="text-left">#' . $no . "</td>";
+							echo '<td class="text-left">' . $row->product_name . ($row->variant ? ' (' . $row->variant . ')' : '').' ('.$row->product_code.')</td>';
 							echo '<td class="text-center">' . $this->erp->formatQuantity($row->quantity);
 							
 							echo '<td class="text-center">' . '$ '. $this->erp->formatMoney($row->real_unit_price) . '</td>';
@@ -87,7 +89,7 @@
 								$total_col = 3;
 								echo '</td>';
 							}else{
-								if($total_disc != ''){
+								if($t_discount>0){
 									echo '<td class="text-center"></td>';
 									$colspan = 5;
 									$total_col = 3;

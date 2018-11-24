@@ -4988,6 +4988,12 @@ class Reports extends MY_Controller
 			if ($biller_id) {
                 $this->datatables->where('sales.biller_id', $biller_id);
             }
+            if ($start_date) {
+                $this->datatables->where('sales.date >=', $start_date.'00:00:00');
+            }
+            if ($end_date) {
+                $this->datatables->where('sales.date <=', $end_date.'23:59:59');
+            }
             if ($product) {
                 $this->datatables->like('sale_items.product_id', $product);
             }
@@ -5009,9 +5015,7 @@ class Reports extends MY_Controller
             if ($reference_no) {
                 $this->datatables->like('sales.reference_no', $reference_no, 'both');
             }
-            if ($start_date) {
-                $this->datatables->where($this->db->dbprefix('sales').'.date BETWEEN "' . $start_date . '" and "' . $end_date . '"');
-            }
+
             echo $this->datatables->generate();
         }
     }
