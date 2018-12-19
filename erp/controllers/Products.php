@@ -2824,7 +2824,6 @@ class Products extends MY_Controller
         if ($this->form_validation->run() == true) {
 			$this->load->library('upload');
 			if ($_FILES['userfile']['name'][0] != "") {
-
                 $config['upload_path'] = $this->upload_path;
                 $config['allowed_types'] = $this->image_types;
                 $config['max_size'] = $this->allowed_file_size;
