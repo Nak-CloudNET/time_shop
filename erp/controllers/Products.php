@@ -2828,7 +2828,7 @@ class Products extends MY_Controller
                 $config['upload_path'] = $this->upload_path;
                 $config['allowed_types'] = $this->image_types;
                 $config['max_size'] = $this->allowed_file_size;
-                $config['overwrite'] = FALSE;
+                $config['overwrite'] = TRUE;
                 $config['max_filename'] = 500;
                 $files = $_FILES;
                 $cpt = count($_FILES['userfile']['name']);
