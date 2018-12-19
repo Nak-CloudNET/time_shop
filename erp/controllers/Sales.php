@@ -206,6 +206,7 @@ class Sales extends MY_Controller
         } else {
             $reference_no = NULL;
         }
+
         if ($this->input->get('customer')) {
             $customer = $this->input->get('customer');
         } else {
@@ -3614,7 +3615,6 @@ class Sales extends MY_Controller
         if ($this->input->get('id')) {
             $id = $this->input->get('id');
         }
-
         //$this->form_validation->set_rules('reference_no', lang("reference_no"), 'required');
         $this->form_validation->set_rules('amount-paid', lang("amount"), 'required');
         $this->form_validation->set_rules('paid_by', lang("paid_by"), 'required');
@@ -3633,7 +3633,7 @@ class Sales extends MY_Controller
                 'paid_by' => $this->input->post('paid_by'),
                 'cheque_no' => $this->input->post('cheque_no'),
                 'cc_no' => $this->input->post('paid_by') == 'gift_card' ? $this->input->post('gift_card_no') : $this->input->post('pcc_no'),
-                'cc_holder' => $this->input->post('pcc_holder'),
+                'ccs_holder' => $this->input->post('pcc_holder'),
                 'cc_month' => $this->input->post('pcc_month'),
                 'cc_year' => $this->input->post('pcc_year'),
                 'cc_type' => $this->input->post('pcc_type'),

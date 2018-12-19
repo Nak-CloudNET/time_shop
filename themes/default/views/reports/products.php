@@ -60,31 +60,34 @@ if (isset($biller_id)) {
                 });
                 $.ajax({'dataType': 'json', 'type': 'POST', 'url': sSource, 'data': aoData, 'success': fnCallback});
             },
-            "aoColumns": [{"bSortable": false, "mRender": checkbox}, null, null, {"mRender": spb}, {"mRender": spb}, {"mRender": currencyFormat}, {"mRender": spb},null],
+            "aoColumns": [{"bSortable": false, "mRender": checkbox}, null,null,null, null, {"mRender": spb}, {"mRender": spb}, {"mRender": currencyFormat}, {"mRender": spb},null],
             "fnFooterCallback": function (nRow, aaData, iStart, iEnd, aiDisplay) {
                 var pq = 0, sq = 0, bq = 0, pa = 0, sa = 0, ba = 0, pl = 0;
                 for (var i = 0; i < aaData.length; i++) {
-                    p = (aaData[aiDisplay[i]][3]).split('__');
-                    s = (aaData[aiDisplay[i]][4]).split('__');
-                    b = (aaData[aiDisplay[i]][6]).split('__');
+                    p = (aaData[aiDisplay[i]][5]).split('__');
+                    s = (aaData[aiDisplay[i]][6]).split('__');
+                    b = (aaData[aiDisplay[i]][8]).split('__');
                     pq += parseFloat(p[0]);
                     pa += parseFloat(p[1]);
                     sq += parseFloat(s[0]);
                     sa += parseFloat(s[1]);
                     bq += parseFloat(b[0]);
                     ba += parseFloat(b[1]);
-                    pl += parseFloat(aaData[aiDisplay[i]][5]);
+                    pl += parseFloat(aaData[aiDisplay[i]][7]);
                 }
                 var nCells = nRow.getElementsByTagName('th');
-                nCells[3].innerHTML = '<div class="text-right">'+formatQuantity2(pq)+' '+'</div>';
-                nCells[4].innerHTML = '<div class="text-right">'+formatQuantity2(sq)+' '+'</div>';
-                nCells[5].innerHTML = currencyFormat(parseFloat(pl));
-                nCells[6].innerHTML = '<div class="text-right">'+formatQuantity2(bq)+''+'</div>';
+                nCells[5].innerHTML = '<div class="text-right">'+formatQuantity2(pq)+' '+'</div>';
+                nCells[6].innerHTML = '<div class="text-right">'+formatQuantity2(sq)+' '+'</div>';
+                nCells[7].innerHTML = currencyFormat(parseFloat(pl));
+                nCells[8].innerHTML = '<div class="text-right">'+formatQuantity2(bq)+''+'</div>';
                // nCells[6].innerHTML = '<div class="text-right">('+formatQuantity2(bq)+') '+formatMoney(ba)+'</div>';
             }
         }).fnSetFilteringDelay().dtFilter([
-            {column_number: 1, filter_default_label: "[<?=lang('product_code');?>]", filter_type: "text", data: []},
-            {column_number: 2, filter_default_label: "[<?=lang('product_name');?>]", filter_type: "text", data: []},
+            {column_number: 1, filter_default_label: "[<?=lang('brand');?>]", filter_type: "text", data: []},
+            {column_number: 2, filter_default_label: "[<?=lang('product_category');?>]", filter_type: "text", data: []},
+            {column_number: 3, filter_default_label: "[<?=lang('product_code');?>]", filter_type: "text", data: []},
+            {column_number: 4, filter_default_label: "[<?=lang('product_name');?>]", filter_type: "text", data: []},
+
         ], "footer");
     });
 </script>
@@ -295,6 +298,8 @@ if (isset($biller_id)) {
 							<th style="min-width:5%; width: 5%; text-align: center;">
                                 <input class="checkbox checkth" type="checkbox" name="check"/>
                             </th>
+                            <th><?= lang("brand"); ?></th>
+                            <th><?= lang("product_category"); ?></th>
                             <th><?= lang("product_code"); ?></th>
                             <th><?= lang("product_name"); ?></th>
                             <th><?= lang("purchased"); ?></th>
@@ -306,7 +311,7 @@ if (isset($biller_id)) {
                         </thead>
                         <tbody>
                         <tr>
-                            <td colspan="6" class="dataTables_empty"><?= lang('loading_data_from_server') ?></td>
+                            <td colspan="10" class="dataTables_empty"><?= lang('loading_data_from_server') ?></td>
                         </tr>
                         </tbody>
                         <tfoot class="dtFilter">
@@ -314,13 +319,15 @@ if (isset($biller_id)) {
 							<th style="min-width:5%; width: 5%; text-align: center;">
                                 <input class="checkbox checkth" type="checkbox" name="check"/>
                             </th>
+                        <th></th>
+                        <th></th>
                             <th></th>
                             <th></th>
-                            <th><?= lang("purchased"); ?></th>
-                            <th><?= lang("sold"); ?></th>
-                            <th><?= lang("profit_loss"); ?></th>
-                            <th><?= lang("stock_in_hand"); ?></th>
-							<th><?= lang("action"); ?></th>
+                        <th><?= lang("purchased"); ?></th>
+                        <th><?= lang("sold"); ?></th>
+                        <th><?= lang("profit_loss"); ?></th>
+                        <th><?= lang("stock_in_hand"); ?></th>
+                        <th><?= lang("action"); ?></th>
                         </tr>
                         </tfoot>
                     </table>

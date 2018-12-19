@@ -65,12 +65,31 @@ class Pos extends MY_Controller
     function getSales($warehouse_id = NULL)
     {
         $this->erp->checkPermissions('index');
-
         if ((! $this->Owner || ! $this->Admin) && ! $warehouse_id) {
             $user = $this->site->getUser();
             $warehouse_id = $user->warehouse_id;
         }
-		
+
+        if (!empty($this->input->get('customer'))) {
+            $customer = $this->input->get('customer');
+        } else {
+            $customer = NULL;
+        }
+
+        if ($this->input->get('start_date')) {
+            $start_date = $this->input->get('start_date');
+        } else {
+            $start_date = NULL;
+        }
+        if ($this->input->get('end_date')) {
+            $end_date = $this->input->get('end_date');
+        } else {
+            $end_date = NULL;
+        }
+        if ($start_date) {
+        $start_date = $this->erp->fld($start_date);
+            $end_date = $this->erp->fld($end_date);
+    }
         $detail_link = anchor('sales/invoice_landscap_a5/$1', '<i class="fa fa-file-text-o"></i> ' . lang('view_receipt'));
         $payments_link = anchor('pos/payments/$1', '<i class="fa fa-money"></i> ' . lang('view_payments'), 'data-toggle="modal" data-target="#myModal"');
         $add_payment_link = anchor('pos/add_payment/$1', '<i class="fa fa-money"></i> ' . lang('add_payment'), 'data-toggle="modal" data-target="#myModal"');
@@ -98,11 +117,8 @@ class Pos extends MY_Controller
 				$action .= '<li>' . $delete_link . '</li>';
 			}
         $action .= '</ul></div></div>';
-
         $this->load->library('datatables');
-		
 		$exchange_rate = $this->pos_model->getExchange_rate();
-		
         if ($warehouse_id) {
 			$this->datatables
                 ->select($this->db->dbprefix('sales').".id as id, 
@@ -127,7 +143,13 @@ class Pos extends MY_Controller
 				->order_by($this->db->dbprefix('sales').".date", "DESC")
                 ->group_by('sales.id');
         }
+        if ($start_date) {
+            $this->datatables->where($this->db->dbprefix('sales').'.date BETWEEN "' . $start_date . ' 00:00:00" and "' . $end_date . ' 23:59:00"');
+        }
         $this->datatables->where('pos', 1);
+        if ($customer) {
+            $this->datatables->where('sales.customer_id', $customer);
+        }
         if(!$this->Owner && !$this->Admin && $this->session->userdata('view_right') == 0){
 			$this->datatables->where('sales.created_by', $this->session->userdata('user_id'));
 		} elseif ($this->Customer) {
@@ -136,7 +158,6 @@ class Pos extends MY_Controller
         $this->datatables->add_column("Actions", $action, "id, psuspend")->unset_column('psuspend');
         echo $this->datatables->generate();
     }
-
 	function getPos($warehouse_id = NULL)
     {
         $this->erp->checkPermissions('index');
